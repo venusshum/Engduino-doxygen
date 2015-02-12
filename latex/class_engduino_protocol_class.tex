@@ -1,0 +1,75 @@
+\hypertarget{class_engduino_protocol_class}{}\section{Engduino\+Protocol\+Class Class Reference}
+\label{class_engduino_protocol_class}\index{Engduino\+Protocol\+Class@{Engduino\+Protocol\+Class}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_protocol_gaa4f020ed2ebb02ce57afce1c6395627c}{Engduino\+Protocol\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{group___engduino_protocol_gad15fd39a7f4787cf6c8bbfc101df4387}{$\sim$\+Engduino\+Protocol\+Class} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_protocol_ga34fa624085b8267e2793094c67e083e2}{begin} (\hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class} $\ast$eledsc, \hyperlink{class_engduino_accelerometer_class}{Engduino\+Accelerometer\+Class} $\ast$eaccc, \hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class} $\ast$etc, \hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class} $\ast$emc, \hyperlink{class_engduino_light_class}{Engduino\+Light\+Class} $\ast$elc, \hyperlink{class_engduino_button_class}{Engduino\+Button\+Class} $\ast$ebc, \hyperlink{class_engduino_i_r_class}{Engduino\+I\+R\+Class} $\ast$eirc)
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_protocol_ga9fe175a6fd0fce69ad087785485f4a61}{end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ turn off the L\+E\+Ds and stop Protocol O\+S. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_protocol_ga69274ee75df14c92966878a83248f89e}{main\+Loop} ()
+\begin{DoxyCompactList}\small\item\em The main loop of Engduino protocol operating system. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_protocol_gaabeaf6ca75e6f6bbdc3cd9b42f4b8015}{load\+Defaults} ()
+\begin{DoxyCompactList}\small\item\em Initialize protocol variables and settings. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga13412494933a3beaaee8f41fb52b1128}{parse\+Package} (String str, byte $\ast$out\+Nr\+Vals, long $\ast$out\+Vals)
+\begin{DoxyCompactList}\small\item\em Splits string into array of values. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga0572419c0b4aaa6f8f0849271787f2b4}{parse\+Package\+Header} (byte communication\+Channel, byte in\+Nr\+Vals, long $\ast$in\+Vals, struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$out\+Package, byte $\ast$out\+Header\+Size)
+\begin{DoxyCompactList}\small\item\em Parse package header. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gadddb537a6ab657e219d4bbd0d33f79ff}{send\+Package} (byte in\+Nr\+Vals, byte in\+Command\+I\+D, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Send package over the active communication channel. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gaaf4947d0670da27bdab07065b6cc56b6}{send\+Package} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte in\+Nr\+Vals, byte in\+Command\+I\+D, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Send package over the active communication channel. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga4f6f6185d9345303466934fb97f5e5f3}{set\+L\+E\+D} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Turn on or off small green L\+E\+D. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga429539daf1580716935d0f4c9fee60a7}{set\+L\+E\+Ds} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Set colours and brightness of R\+G\+B L\+E\+Ds. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gac1faeb0dc90fcacd10ee643c3a45f82f}{set\+Get\+Status} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t set\+Get)
+\begin{DoxyCompactList}\small\item\em Set or Get status of the Engduino board. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga04358743c2b3e13ff61eb072d57e782a}{set\+Get\+I\+R} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t set\+Get)
+\begin{DoxyCompactList}\small\item\em Set or Get data from I\+R communication. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gad585cd4ca7ea413a137fe5783825a612}{get\+Version} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package)
+\begin{DoxyCompactList}\small\item\em Get Engduino board version and running sketch on it. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga504071d488f9d2a9ace156c4523ea18d}{get\+Sensor} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, int sensor\+Type, byte nr\+Vals, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Get Engduino\textquotesingle{}s sensor measurements. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gad53e6d5d3c390c3eca7f0456aa7a5d05}{get\+Button} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals)
+\begin{DoxyCompactList}\small\item\em Get Engduino\textquotesingle{}s sensor measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_engduino_protocol_class_ae06ac1a1ff252feb2ae473c6c4fe95a3}{}\hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class} $\ast$ {\bfseries engduino\+L\+E\+Ds}\label{class_engduino_protocol_class_ae06ac1a1ff252feb2ae473c6c4fe95a3}
+
+\item 
+\hypertarget{class_engduino_protocol_class_a0584004462e7501ca49b2dc4be77508b}{}\hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class} $\ast$ {\bfseries engduino\+Thermistor}\label{class_engduino_protocol_class_a0584004462e7501ca49b2dc4be77508b}
+
+\item 
+\hypertarget{class_engduino_protocol_class_a67132cca370b49bdf0815b42748f4841}{}\hyperlink{class_engduino_accelerometer_class}{Engduino\+Accelerometer\+Class} $\ast$ {\bfseries engduino\+Accelerometer}\label{class_engduino_protocol_class_a67132cca370b49bdf0815b42748f4841}
+
+\item 
+\hypertarget{class_engduino_protocol_class_ae0494dfe5a16238fd4ec2689880a7408}{}\hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class} $\ast$ {\bfseries engduino\+Magnetometer}\label{class_engduino_protocol_class_ae0494dfe5a16238fd4ec2689880a7408}
+
+\item 
+\hypertarget{class_engduino_protocol_class_a7d5cd7d8c682cdaab633ac47881531e5}{}\hyperlink{class_engduino_light_class}{Engduino\+Light\+Class} $\ast$ {\bfseries engduino\+Light}\label{class_engduino_protocol_class_a7d5cd7d8c682cdaab633ac47881531e5}
+
+\item 
+\hypertarget{class_engduino_protocol_class_aa934e66345dfaeddab03f3b20bc71fac}{}\hyperlink{class_engduino_button_class}{Engduino\+Button\+Class} $\ast$ {\bfseries engduino\+Button}\label{class_engduino_protocol_class_aa934e66345dfaeddab03f3b20bc71fac}
+
+\item 
+\hypertarget{class_engduino_protocol_class_a3e8e517b0ed2b39ec93907d759e25ebe}{}\hyperlink{class_engduino_i_r_class}{Engduino\+I\+R\+Class} $\ast$ {\bfseries engduino\+I\+R}\label{class_engduino_protocol_class_a3e8e517b0ed2b39ec93907d759e25ebe}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_engduino_protocol_class_a01641f91ca3e348b0080eeaa767d626b}{}void {\bfseries T\+I\+M\+E\+R1\+\_\+\+C\+O\+M\+P\+A\+\_\+vect} ()\label{class_engduino_protocol_class_a01641f91ca3e348b0080eeaa767d626b}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sources/\+Engduino\+Protocol/src/\hyperlink{_engduino_protocol_8h}{Engduino\+Protocol.\+h}\item 
+Sources/\+Engduino\+Protocol/src/\hyperlink{_engduino_protocol_8cpp}{Engduino\+Protocol.\+cpp}\end{DoxyCompactItemize}

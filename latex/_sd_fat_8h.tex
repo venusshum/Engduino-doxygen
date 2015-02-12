@@ -1,0 +1,160 @@
+\hypertarget{_sd_fat_8h}{}\section{Sources/\+Engduino\+S\+D/src/utility/\+Sd\+Fat.h File Reference}
+\label{_sd_fat_8h}\index{Sources/\+Engduino\+S\+D/src/utility/\+Sd\+Fat.\+h@{Sources/\+Engduino\+S\+D/src/utility/\+Sd\+Fat.\+h}}
+{\ttfamily \#include \char`\"{}Sd2\+Card.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Fat\+Structs.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Print.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_sd_file}{Sd\+File}
+\begin{DoxyCompactList}\small\item\em Access F\+A\+T16 and F\+A\+T32 files on S\+D and S\+D\+H\+C cards. \end{DoxyCompactList}\item 
+union \hyperlink{unioncache__t}{cache\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Cache for an S\+D data block. \end{DoxyCompactList}\item 
+class \hyperlink{class_sd_volume}{Sd\+Volume}
+\begin{DoxyCompactList}\small\item\em Access F\+A\+T16 and F\+A\+T32 volumes on S\+D and S\+D\+H\+C cards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_sd_fat_8h_af8ef36dfd023f41169baa17d05f55c56}{A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S}~1
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ac78cfe032599ef1f5723c62106017fcd}{L\+S\+\_\+\+D\+A\+T\+E} = 1
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a8170e56f2df0139f3acd73c35636fa7f}{L\+S\+\_\+\+S\+I\+Z\+E} = 2
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_af90ecd4124f4c2563b37174be91e76f9}{L\+S\+\_\+\+R} = 4
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}{O\+\_\+\+R\+E\+A\+D} = 0\+X01
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ac13ca62d7e6f8f6d657d4607474652bf}{O\+\_\+\+R\+D\+O\+N\+L\+Y} = \hyperlink{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}{O\+\_\+\+R\+E\+A\+D}
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}{O\+\_\+\+W\+R\+I\+T\+E} = 0\+X02
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a782767ee2580bb1566048017b254281d}{O\+\_\+\+W\+R\+O\+N\+L\+Y} = \hyperlink{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}{O\+\_\+\+W\+R\+I\+T\+E}
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ad79c5a45cb5e4855b771629fc15d78f6}{O\+\_\+\+R\+D\+W\+R} = (\hyperlink{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}{O\+\_\+\+R\+E\+A\+D} $\vert$ \hyperlink{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}{O\+\_\+\+W\+R\+I\+T\+E})
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a4efda39151f5ef2dc7fbd138be51336a}{O\+\_\+\+A\+C\+C\+M\+O\+D\+E} = (\hyperlink{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}{O\+\_\+\+R\+E\+A\+D} $\vert$ \hyperlink{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}{O\+\_\+\+W\+R\+I\+T\+E})
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a4242b37e810af3a6485adda0e08a9a2b}{O\+\_\+\+A\+P\+P\+E\+N\+D} = 0\+X04
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a3066c471d52b056dec13fa567f7bbd9d}{O\+\_\+\+S\+Y\+N\+C} = 0\+X08
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a20d0ef801486dd02de6ee482de731193}{O\+\_\+\+C\+R\+E\+A\+T} = 0\+X10
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ab5635d4288cb294c1ed000fa183e072b}{O\+\_\+\+E\+X\+C\+L} = 0\+X20
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a9dc438ff90d0c8af452331c339dbc08e}{O\+\_\+\+T\+R\+U\+N\+C} = 0\+X40
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a5f34ce6e95713d872ca6a640c8783462}{T\+\_\+\+A\+C\+C\+E\+S\+S} = 1
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a533dc316f5a59209ac5e9c630d2df4c4}{T\+\_\+\+C\+R\+E\+A\+T\+E} = 2
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a2a6192fd0f5847783868deed6de53d1e}{T\+\_\+\+W\+R\+I\+T\+E} = 4
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a4da8c96e256b06356321e81705494010}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D} = 0
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a666774999b9afd627fdad75471101581}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L} = 1
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a4c02ced3c57420e2a1997f51bd87d150}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16} = 2
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_a9a1a07cb1d09cfdb3cc53183c6e5dc57}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32} = 3
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_ac301b0465fdd7953c6e110b9896cc9fd}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R} = 4
+\item 
+uint8\+\_\+t const \hyperlink{_sd_fat_8h_abc9b0906aeeedfe122b0ca629bac889b}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R} = \hyperlink{_sd_fat_8h_a4c02ced3c57420e2a1997f51bd87d150}{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16}
+\item 
+uint16\+\_\+t const \hyperlink{_sd_fat_8h_a441bb1bc5f52d512656de3b86a279948}{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E} = ((2000 -\/ 1980) $<$$<$ 9) $\vert$ (1 $<$$<$ 5) $\vert$ 1
+\item 
+uint16\+\_\+t const \hyperlink{_sd_fat_8h_a00451fc2d3563a2255797bd1f40507fb}{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E} = (1 $<$$<$ 11)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_sd_file}{Sd\+File} and \hyperlink{class_sd_volume}{Sd\+Volume} classes 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_sd_fat_8h_af8ef36dfd023f41169baa17d05f55c56}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S@{A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S}}
+\index{A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S@{A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+O\+W\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S~1}\label{_sd_fat_8h_af8ef36dfd023f41169baa17d05f55c56}
+Allow use of deprecated functions if non-\/zero 
+
+\subsection{Variable Documentation}
+\hypertarget{_sd_fat_8h_a441bb1bc5f52d512656de3b86a279948}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E@{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E}}
+\index{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E@{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t const F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+A\+T\+E = ((2000 -\/ 1980) $<$$<$ 9) $\vert$ (1 $<$$<$ 5) $\vert$ 1}\label{_sd_fat_8h_a441bb1bc5f52d512656de3b86a279948}
+Default date for file timestamps is 1 Jan 2000 \hypertarget{_sd_fat_8h_a00451fc2d3563a2255797bd1f40507fb}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E@{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E}}
+\index{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E@{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t const F\+A\+T\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E = (1 $<$$<$ 11)}\label{_sd_fat_8h_a00451fc2d3563a2255797bd1f40507fb}
+Default time for file timestamp is 1 am \hypertarget{_sd_fat_8h_a4da8c96e256b06356321e81705494010}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+O\+S\+E\+D = 0}\label{_sd_fat_8h_a4da8c96e256b06356321e81705494010}
+This \hyperlink{class_sd_file}{Sd\+File} has not been opened. \hypertarget{_sd_fat_8h_abc9b0906aeeedfe122b0ca629bac889b}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+I\+N\+\_\+\+D\+I\+R = {\bf F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16}}\label{_sd_fat_8h_abc9b0906aeeedfe122b0ca629bac889b}
+Test value for directory type \hypertarget{_sd_fat_8h_a666774999b9afd627fdad75471101581}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+R\+M\+A\+L = 1}\label{_sd_fat_8h_a666774999b9afd627fdad75471101581}
+\hyperlink{class_sd_file}{Sd\+File} for a file \hypertarget{_sd_fat_8h_a4c02ced3c57420e2a1997f51bd87d150}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T16 = 2}\label{_sd_fat_8h_a4c02ced3c57420e2a1997f51bd87d150}
+\hyperlink{class_sd_file}{Sd\+File} for a F\+A\+T16 root directory \hypertarget{_sd_fat_8h_a9a1a07cb1d09cfdb3cc53183c6e5dc57}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+O\+O\+T32 = 3}\label{_sd_fat_8h_a9a1a07cb1d09cfdb3cc53183c6e5dc57}
+\hyperlink{class_sd_file}{Sd\+File} for a F\+A\+T32 root directory \hypertarget{_sd_fat_8h_ac301b0465fdd7953c6e110b9896cc9fd}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R}}
+\index{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R@{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const F\+A\+T\+\_\+\+F\+I\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+U\+B\+D\+I\+R = 4}\label{_sd_fat_8h_ac301b0465fdd7953c6e110b9896cc9fd}
+\hyperlink{class_sd_file}{Sd\+File} for a subdirectory \hypertarget{_sd_fat_8h_ac78cfe032599ef1f5723c62106017fcd}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!L\+S\+\_\+\+D\+A\+T\+E@{L\+S\+\_\+\+D\+A\+T\+E}}
+\index{L\+S\+\_\+\+D\+A\+T\+E@{L\+S\+\_\+\+D\+A\+T\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{L\+S\+\_\+\+D\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const L\+S\+\_\+\+D\+A\+T\+E = 1}\label{_sd_fat_8h_ac78cfe032599ef1f5723c62106017fcd}
+ls() flag to print modify date \hypertarget{_sd_fat_8h_af90ecd4124f4c2563b37174be91e76f9}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!L\+S\+\_\+\+R@{L\+S\+\_\+\+R}}
+\index{L\+S\+\_\+\+R@{L\+S\+\_\+\+R}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{L\+S\+\_\+\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const L\+S\+\_\+\+R = 4}\label{_sd_fat_8h_af90ecd4124f4c2563b37174be91e76f9}
+ls() flag for recursive list of subdirectories \hypertarget{_sd_fat_8h_a8170e56f2df0139f3acd73c35636fa7f}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!L\+S\+\_\+\+S\+I\+Z\+E@{L\+S\+\_\+\+S\+I\+Z\+E}}
+\index{L\+S\+\_\+\+S\+I\+Z\+E@{L\+S\+\_\+\+S\+I\+Z\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{L\+S\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const L\+S\+\_\+\+S\+I\+Z\+E = 2}\label{_sd_fat_8h_a8170e56f2df0139f3acd73c35636fa7f}
+ls() flag to print file size \hypertarget{_sd_fat_8h_a4efda39151f5ef2dc7fbd138be51336a}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+A\+C\+C\+M\+O\+D\+E@{O\+\_\+\+A\+C\+C\+M\+O\+D\+E}}
+\index{O\+\_\+\+A\+C\+C\+M\+O\+D\+E@{O\+\_\+\+A\+C\+C\+M\+O\+D\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+A\+C\+C\+M\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+A\+C\+C\+M\+O\+D\+E = ({\bf O\+\_\+\+R\+E\+A\+D} $\vert$ {\bf O\+\_\+\+W\+R\+I\+T\+E})}\label{_sd_fat_8h_a4efda39151f5ef2dc7fbd138be51336a}
+open() oflag mask for access modes \hypertarget{_sd_fat_8h_a4242b37e810af3a6485adda0e08a9a2b}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+A\+P\+P\+E\+N\+D@{O\+\_\+\+A\+P\+P\+E\+N\+D}}
+\index{O\+\_\+\+A\+P\+P\+E\+N\+D@{O\+\_\+\+A\+P\+P\+E\+N\+D}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+A\+P\+P\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+A\+P\+P\+E\+N\+D = 0\+X04}\label{_sd_fat_8h_a4242b37e810af3a6485adda0e08a9a2b}
+The file offset shall be set to the end of the file prior to each write. \hypertarget{_sd_fat_8h_a20d0ef801486dd02de6ee482de731193}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+C\+R\+E\+A\+T@{O\+\_\+\+C\+R\+E\+A\+T}}
+\index{O\+\_\+\+C\+R\+E\+A\+T@{O\+\_\+\+C\+R\+E\+A\+T}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+C\+R\+E\+A\+T}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+C\+R\+E\+A\+T = 0\+X10}\label{_sd_fat_8h_a20d0ef801486dd02de6ee482de731193}
+create the file if nonexistent \hypertarget{_sd_fat_8h_ab5635d4288cb294c1ed000fa183e072b}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+E\+X\+C\+L@{O\+\_\+\+E\+X\+C\+L}}
+\index{O\+\_\+\+E\+X\+C\+L@{O\+\_\+\+E\+X\+C\+L}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+E\+X\+C\+L}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+E\+X\+C\+L = 0\+X20}\label{_sd_fat_8h_ab5635d4288cb294c1ed000fa183e072b}
+If O\+\_\+\+C\+R\+E\+A\+T and O\+\_\+\+E\+X\+C\+L are set, open() shall fail if the file exists \hypertarget{_sd_fat_8h_ac13ca62d7e6f8f6d657d4607474652bf}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+R\+D\+O\+N\+L\+Y@{O\+\_\+\+R\+D\+O\+N\+L\+Y}}
+\index{O\+\_\+\+R\+D\+O\+N\+L\+Y@{O\+\_\+\+R\+D\+O\+N\+L\+Y}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+R\+D\+O\+N\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+R\+D\+O\+N\+L\+Y = {\bf O\+\_\+\+R\+E\+A\+D}}\label{_sd_fat_8h_ac13ca62d7e6f8f6d657d4607474652bf}
+open() oflag -\/ same as O\+\_\+\+R\+E\+A\+D \hypertarget{_sd_fat_8h_ad79c5a45cb5e4855b771629fc15d78f6}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+R\+D\+W\+R@{O\+\_\+\+R\+D\+W\+R}}
+\index{O\+\_\+\+R\+D\+W\+R@{O\+\_\+\+R\+D\+W\+R}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+R\+D\+W\+R}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+R\+D\+W\+R = ({\bf O\+\_\+\+R\+E\+A\+D} $\vert$ {\bf O\+\_\+\+W\+R\+I\+T\+E})}\label{_sd_fat_8h_ad79c5a45cb5e4855b771629fc15d78f6}
+open() oflag for reading and writing \hypertarget{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+R\+E\+A\+D@{O\+\_\+\+R\+E\+A\+D}}
+\index{O\+\_\+\+R\+E\+A\+D@{O\+\_\+\+R\+E\+A\+D}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+R\+E\+A\+D}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+R\+E\+A\+D = 0\+X01}\label{_sd_fat_8h_ac5a1c3e543273b0374ba114c496e662e}
+open() oflag for reading \hypertarget{_sd_fat_8h_a3066c471d52b056dec13fa567f7bbd9d}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+S\+Y\+N\+C@{O\+\_\+\+S\+Y\+N\+C}}
+\index{O\+\_\+\+S\+Y\+N\+C@{O\+\_\+\+S\+Y\+N\+C}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+S\+Y\+N\+C}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+S\+Y\+N\+C = 0\+X08}\label{_sd_fat_8h_a3066c471d52b056dec13fa567f7bbd9d}
+synchronous writes -\/ call sync() after each write \hypertarget{_sd_fat_8h_a9dc438ff90d0c8af452331c339dbc08e}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+T\+R\+U\+N\+C@{O\+\_\+\+T\+R\+U\+N\+C}}
+\index{O\+\_\+\+T\+R\+U\+N\+C@{O\+\_\+\+T\+R\+U\+N\+C}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+T\+R\+U\+N\+C}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+T\+R\+U\+N\+C = 0\+X40}\label{_sd_fat_8h_a9dc438ff90d0c8af452331c339dbc08e}
+truncate the file to zero length \hypertarget{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+W\+R\+I\+T\+E@{O\+\_\+\+W\+R\+I\+T\+E}}
+\index{O\+\_\+\+W\+R\+I\+T\+E@{O\+\_\+\+W\+R\+I\+T\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+W\+R\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+W\+R\+I\+T\+E = 0\+X02}\label{_sd_fat_8h_a44c1620ada13f6318ab39b9fa38ef55a}
+open() oflag for write \hypertarget{_sd_fat_8h_a782767ee2580bb1566048017b254281d}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!O\+\_\+\+W\+R\+O\+N\+L\+Y@{O\+\_\+\+W\+R\+O\+N\+L\+Y}}
+\index{O\+\_\+\+W\+R\+O\+N\+L\+Y@{O\+\_\+\+W\+R\+O\+N\+L\+Y}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{O\+\_\+\+W\+R\+O\+N\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const O\+\_\+\+W\+R\+O\+N\+L\+Y = {\bf O\+\_\+\+W\+R\+I\+T\+E}}\label{_sd_fat_8h_a782767ee2580bb1566048017b254281d}
+open() oflag -\/ same as O\+\_\+\+W\+R\+I\+T\+E \hypertarget{_sd_fat_8h_a5f34ce6e95713d872ca6a640c8783462}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!T\+\_\+\+A\+C\+C\+E\+S\+S@{T\+\_\+\+A\+C\+C\+E\+S\+S}}
+\index{T\+\_\+\+A\+C\+C\+E\+S\+S@{T\+\_\+\+A\+C\+C\+E\+S\+S}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{T\+\_\+\+A\+C\+C\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const T\+\_\+\+A\+C\+C\+E\+S\+S = 1}\label{_sd_fat_8h_a5f34ce6e95713d872ca6a640c8783462}
+set the file\textquotesingle{}s last access date \hypertarget{_sd_fat_8h_a533dc316f5a59209ac5e9c630d2df4c4}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!T\+\_\+\+C\+R\+E\+A\+T\+E@{T\+\_\+\+C\+R\+E\+A\+T\+E}}
+\index{T\+\_\+\+C\+R\+E\+A\+T\+E@{T\+\_\+\+C\+R\+E\+A\+T\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{T\+\_\+\+C\+R\+E\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const T\+\_\+\+C\+R\+E\+A\+T\+E = 2}\label{_sd_fat_8h_a533dc316f5a59209ac5e9c630d2df4c4}
+set the file\textquotesingle{}s creation date and time \hypertarget{_sd_fat_8h_a2a6192fd0f5847783868deed6de53d1e}{}\index{Sd\+Fat.\+h@{Sd\+Fat.\+h}!T\+\_\+\+W\+R\+I\+T\+E@{T\+\_\+\+W\+R\+I\+T\+E}}
+\index{T\+\_\+\+W\+R\+I\+T\+E@{T\+\_\+\+W\+R\+I\+T\+E}!Sd\+Fat.\+h@{Sd\+Fat.\+h}}
+\subsubsection[{T\+\_\+\+W\+R\+I\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t const T\+\_\+\+W\+R\+I\+T\+E = 4}\label{_sd_fat_8h_a2a6192fd0f5847783868deed6de53d1e}
+Set the file\textquotesingle{}s write date and time 

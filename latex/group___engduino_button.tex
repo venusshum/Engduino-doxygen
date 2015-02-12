@@ -1,0 +1,180 @@
+\hypertarget{group___engduino_button}{}\section{Driver for Engduino Button}
+\label{group___engduino_button}\index{Driver for Engduino Button@{Driver for Engduino Button}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_button_8cpp}{Engduino\+Button.\+cpp}
+\item 
+file \hyperlink{_engduino_button_8h}{Engduino\+Button.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_button_class}{Engduino\+Button\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_button_gadb75862f582a7d68347ceae4f4c003c9}{}\#define {\bfseries D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+D\+E\+L\+A\+Y}~50\label{group___engduino_button_gadb75862f582a7d68347ceae4f4c003c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_button_ga28be307ba14efb36d0965f4be9c19b62}{I\+S\+R} (I\+N\+T6\+\_\+vect)
+\begin{DoxyCompactList}\small\item\em I\+S\+R for I\+N\+T.\+6 on the A\+T\+Mega32\+U4. This is connected to the button. \end{DoxyCompactList}\item 
+\hypertarget{group___engduino_button_ga6259e9cde08e3b67bf7cb921c4dd8458}{}void {\bfseries I\+N\+T6\+\_\+vect} (void) \+\_\+\+\_\+attribute\+\_\+\+\_\+((signal))\label{group___engduino_button_ga6259e9cde08e3b67bf7cb921c4dd8458}
+
+\item 
+\hyperlink{group___engduino_button_ga63fbf8689adcf68e546153e1cba62277}{Engduino\+Button\+Class\+::\+Engduino\+Button\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_button_ga22235e73e3a5e2e4b0a8c12709b53ea5}{Engduino\+Button\+Class\+::begin} (long debounce\+Delay=D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+D\+E\+L\+A\+Y)
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_button_gabd1ddb88707b93a8ebd1ad61c458073e}{Engduino\+Button\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the button \end{DoxyCompactList}\item 
+bool \hyperlink{group___engduino_button_ga7b1d7a4d6a9602d549ad7d22fbe1d61b}{Engduino\+Button\+Class\+::is\+Pressed} ()
+\begin{DoxyCompactList}\small\item\em Check to see if the button is pressed. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_button_gab7c5e25ca8c7b46bb5afb89349dc2764}{Engduino\+Button\+Class\+::wait\+Until\+Pressed} ()
+\begin{DoxyCompactList}\small\item\em Wait until the button is pressed. Blocking call. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_button_ga6c073bb47b4514b4489092ff1d8d4191}{Engduino\+Button\+Class\+::wait\+Until\+Released} ()
+\begin{DoxyCompactList}\small\item\em Wait until the button is released. Blocking call. \end{DoxyCompactList}\item 
+bool \hyperlink{group___engduino_button_gaa7265d49dd122b3a0bf39b01f4219291}{Engduino\+Button\+Class\+::was\+Pressed} ()
+\begin{DoxyCompactList}\small\item\em Check to see if the button was pressed since our last check. \end{DoxyCompactList}\item 
+bool \hyperlink{group___engduino_button_gad1df7a49cef083fb338415d172232f92}{Engduino\+Button\+Class\+::was\+Released} ()
+\begin{DoxyCompactList}\small\item\em Check to see if the button was released since our last check. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_button_ga7725cc88999b6287c4b2e3ba0d2f4cac}{Engduino\+Button\+Class\+::reset} ()
+\begin{DoxyCompactList}\small\item\em Reset the was\+Pressed/was\+Released state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_button_gafa9c41eb26e1fbf281f34e6c8870aedc}{}\hyperlink{class_engduino_button_class}{Engduino\+Button\+Class} {\bfseries Engduino\+Button} = \hyperlink{class_engduino_button_class}{Engduino\+Button\+Class}()\label{group___engduino_button_gafa9c41eb26e1fbf281f34e6c8870aedc}
+
+\item 
+\hypertarget{group___engduino_button_gafa9c41eb26e1fbf281f34e6c8870aedc}{}\hyperlink{class_engduino_button_class}{Engduino\+Button\+Class} {\bfseries Engduino\+Button}\label{group___engduino_button_gafa9c41eb26e1fbf281f34e6c8870aedc}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the driver code for the button on the Engduino. This uses an I\+S\+R to debounce the button -\/ it uses edges rather than the value of the digital pin.
+
+The debounce time can be set in the begin routine, but defaults to the D\+E\+B\+O\+U\+N\+C\+E\+\_\+\+D\+E\+L\+A\+Y value defined in the header. 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_button_ga22235e73e3a5e2e4b0a8c12709b53ea5}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Button\+Class\+::begin (
+\begin{DoxyParamCaption}
+\item[{long}]{debounce\+Delay = {\ttfamily DEBOUNCE\+\_\+DELAY}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga22235e73e3a5e2e4b0a8c12709b53ea5}
+
+
+begin function -\/ must be called before using other functions 
+
+This function enables the button. It can be called with a parameter that represents the debounce delay, but this defaults to a sensible value if it is not provided. \hypertarget{group___engduino_button_gabd1ddb88707b93a8ebd1ad61c458073e}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!end@{end}}
+\index{end@{end}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Button\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_gabd1ddb88707b93a8ebd1ad61c458073e}
+
+
+end function -\/ switch off the button 
+
+Switch off the interrupt and reset state. \hypertarget{group___engduino_button_ga63fbf8689adcf68e546153e1cba62277}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!Engduino\+Button\+Class@{Engduino\+Button\+Class}}
+\index{Engduino\+Button\+Class@{Engduino\+Button\+Class}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{Engduino\+Button\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Button\+Class\+::\+Engduino\+Button\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga63fbf8689adcf68e546153e1cba62277}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_button_ga7b1d7a4d6a9602d549ad7d22fbe1d61b}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!is\+Pressed@{is\+Pressed}}
+\index{is\+Pressed@{is\+Pressed}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{is\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}bool Engduino\+Button\+Class\+::is\+Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga7b1d7a4d6a9602d549ad7d22fbe1d61b}
+
+
+Check to see if the button is pressed. 
+
+Check to see if the button is pressed. If it is not pressed, it is, by definition, released. \hypertarget{group___engduino_button_ga28be307ba14efb36d0965f4be9c19b62}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!I\+S\+R@{I\+S\+R}}
+\index{I\+S\+R@{I\+S\+R}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}I\+S\+R (
+\begin{DoxyParamCaption}
+\item[{I\+N\+T6\+\_\+vect}]{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga28be307ba14efb36d0965f4be9c19b62}
+
+
+I\+S\+R for I\+N\+T.\+6 on the A\+T\+Mega32\+U4. This is connected to the button. 
+
+This I\+S\+R is set to go off on either edge, but we change which edge depending on whether we last saw a falling edge or a rising edge. This seems overkill, but trying to implement this I\+S\+R to react to a change of any description doesn\textquotesingle{}t work well, because we can\textquotesingle{}t tell which direction the change is in. Given we have an edge, set the state of the button and whether it was pressed or released, but only if the switch isn\textquotesingle{}t bouncing. We determine whether it is bouncing by looking at how long it\textquotesingle{}s been stable for; if this is long enough, then we regard this as being the first edge (button not bouncing) and change state. If it is not, we simply record the current time as the time of the last change. \hypertarget{group___engduino_button_ga7725cc88999b6287c4b2e3ba0d2f4cac}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!reset@{reset}}
+\index{reset@{reset}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Button\+Class\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga7725cc88999b6287c4b2e3ba0d2f4cac}
+
+
+Reset the was\+Pressed/was\+Released state. 
+
+This function resets the was\+Pressed/was\+Released state to false -\/ it can be used to start a period of looking for a button press, ignoring what happened before reset was called. Note, however, that calling was\+Pressed or was\+Released also resets the appropriate part of the state. \hypertarget{group___engduino_button_gab7c5e25ca8c7b46bb5afb89349dc2764}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!wait\+Until\+Pressed@{wait\+Until\+Pressed}}
+\index{wait\+Until\+Pressed@{wait\+Until\+Pressed}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{wait\+Until\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Button\+Class\+::wait\+Until\+Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_gab7c5e25ca8c7b46bb5afb89349dc2764}
+
+
+Wait until the button is pressed. Blocking call. 
+
+Just loops indefinitely, polling the button state until the button is pressed. The event we wait for is the button going down. If the button is currently pressed, we wait for it to be released and then wait for it to be pressed again \hypertarget{group___engduino_button_ga6c073bb47b4514b4489092ff1d8d4191}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!wait\+Until\+Released@{wait\+Until\+Released}}
+\index{wait\+Until\+Released@{wait\+Until\+Released}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{wait\+Until\+Released}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Button\+Class\+::wait\+Until\+Released (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_ga6c073bb47b4514b4489092ff1d8d4191}
+
+
+Wait until the button is released. Blocking call. 
+
+Just loops indefinitely, polling the button state until the button is released. The event we wait for is the button going up. If the button is currently released, we wait for it to be pressed and then wait for it to be released again \hypertarget{group___engduino_button_gaa7265d49dd122b3a0bf39b01f4219291}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!was\+Pressed@{was\+Pressed}}
+\index{was\+Pressed@{was\+Pressed}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{was\+Pressed}]{\setlength{\rightskip}{0pt plus 5cm}bool Engduino\+Button\+Class\+::was\+Pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_gaa7265d49dd122b3a0bf39b01f4219291}
+
+
+Check to see if the button was pressed since our last check. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not is has been pressed since we last checked.
+\end{DoxyReturn}
+This function checks to see if the button has been pressed in some intervening period when we were not checking it actively. On each check we return a boolean that shows whether the button has been pressed, and we reset the state so one can look for a new button press at some later point. \hypertarget{group___engduino_button_gad1df7a49cef083fb338415d172232f92}{}\index{Driver for Engduino Button@{Driver for Engduino Button}!was\+Released@{was\+Released}}
+\index{was\+Released@{was\+Released}!Driver for Engduino Button@{Driver for Engduino Button}}
+\subsubsection[{was\+Released}]{\setlength{\rightskip}{0pt plus 5cm}bool Engduino\+Button\+Class\+::was\+Released (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_button_gad1df7a49cef083fb338415d172232f92}
+
+
+Check to see if the button was released since our last check. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not is has been released since we last checked.
+\end{DoxyReturn}
+This function checks to see if the button has been released in some intervening period when we were not checking it actively. On each check we return a boolean that shows whether the button has been released, and we reset the state so one can look for a new button release at some later point. 

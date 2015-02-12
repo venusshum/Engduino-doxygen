@@ -1,0 +1,40 @@
+\hypertarget{class_engduino_i_r_class}{}\section{Engduino\+I\+R\+Class Class Reference}
+\label{class_engduino_i_r_class}\index{Engduino\+I\+R\+Class@{Engduino\+I\+R\+Class}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_i_r_ga7a7733226d0614e9d7401d499cccb8de}{Engduino\+I\+R\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_ga175bacdfa791bca99cf90400559d5a3c}{begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_ga8ca0afe3a5b7eae3543b5717c95048cc}{end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the I\+R \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_gaf8b6552647c01a98d12f3acb98f50b8a}{send\+Bit} (bool b)
+\begin{DoxyCompactList}\small\item\em Send a single bit. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_ga5380221a35dec8cae06e305a640047ad}{send} (uint8\+\_\+t b, bool startstop=true)
+\begin{DoxyCompactList}\small\item\em Send a byte. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_gabcf780f269e0570a4dcd1f07f628ba17}{send} (uint8\+\_\+t $\ast$buf, unsigned int len, bool startstop=true)
+\begin{DoxyCompactList}\small\item\em Send a buffer of bytes. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_ga2f933b89a87c5234454509bf6bc53ea5}{send} (char $\ast$buf, unsigned int len, bool startstop=true)
+\begin{DoxyCompactList}\small\item\em Send a buffer of bytes. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_i_r_gadd747831975bc37388f0ad27f6085c60}{send\+Raw} (unsigned int $\ast$buf, int len)
+\begin{DoxyCompactList}\small\item\em Raw send function. Provide timings for mark and space pairs. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_i_r_gaca86f6ca262e5a77553535000f0b24a9}{recv} (uint8\+\_\+t $\ast$buf, uint16\+\_\+t timeout=0, bool startstop=true)
+\begin{DoxyCompactList}\small\item\em Blocking receive of an I\+R transmission, with optional timeout. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_i_r_ga62662ec690cb14fbd4b0bb511880cc77}{recv\+Raw} (uint16\+\_\+t $\ast$buf, uint16\+\_\+t timeout=0)
+\begin{DoxyCompactList}\small\item\em Raw receive function -\/ returns timings for inter-\/mark gaps. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_engduino_i_r_class_ac222d46ee6195df5e54711cc39202e78}{}void {\bfseries T\+I\+M\+E\+R3\+\_\+\+C\+O\+M\+P\+B\+\_\+vect} ()\label{class_engduino_i_r_class_ac222d46ee6195df5e54711cc39202e78}
+
+\item 
+\hypertarget{class_engduino_i_r_class_a7d11a7b3c8cae332581c5c8a077c8eaa}{}void {\bfseries P\+C\+I\+N\+T0\+\_\+vect} ()\label{class_engduino_i_r_class_a7d11a7b3c8cae332581c5c8a077c8eaa}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Sources/\+Engduino\+I\+R/src/\hyperlink{_engduino_i_r_8h}{Engduino\+I\+R.\+h}\item 
+Sources/\+Engduino\+I\+R/src/\hyperlink{_engduino_i_r_8cpp}{Engduino\+I\+R.\+cpp}\end{DoxyCompactItemize}

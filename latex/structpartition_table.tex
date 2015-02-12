@@ -1,0 +1,87 @@
+\hypertarget{structpartition_table}{}\section{partition\+Table Struct Reference}
+\label{structpartition_table}\index{partition\+Table@{partition\+Table}}
+
+
+M\+B\+R partition table entry.  
+
+
+
+
+{\ttfamily \#include $<$Fat\+Structs.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_adf386afb1f33046d8b6a1a0afa780ec9}{boot}
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_a7d426694b8cf2151ae38568670a8c845}{begin\+Head}
+\item 
+unsigned \hyperlink{structpartition_table_ae201c11d9671c9efc307c654a2b6c026}{begin\+Sector}\+: 6
+\item 
+unsigned \hyperlink{structpartition_table_a744f0c7f9ad4c426b10de085b4f52392}{begin\+Cylinder\+High}\+: 2
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_a941fcb4df298f5f73ccca011bf40787a}{begin\+Cylinder\+Low}
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_a3861cf276c728c4dd30ca04e74197ee8}{type}
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_a4a3945bfd3a29f474984cb9f180dbd51}{end\+Head}
+\item 
+unsigned \hyperlink{structpartition_table_a27cdc4320c418ed0d833ab163ed77ad7}{end\+Sector}\+: 6
+\item 
+unsigned \hyperlink{structpartition_table_a32fea225b8ffd925ad919ffc56e9abda}{end\+Cylinder\+High}\+: 2
+\item 
+uint8\+\_\+t \hyperlink{structpartition_table_ad7829e34be70084abe145227b0d18274}{end\+Cylinder\+Low}
+\item 
+uint32\+\_\+t \hyperlink{structpartition_table_a02bbdff840c854dc96fa0b6da8589d86}{first\+Sector}
+\item 
+uint32\+\_\+t \hyperlink{structpartition_table_acf96e59ce648a9a0cf35751c3b6d7730}{total\+Sectors}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\+B\+R partition table entry. 
+
+A partition table entry for a M\+B\+R formatted storage device. The M\+B\+R partition table has four entries. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structpartition_table_a744f0c7f9ad4c426b10de085b4f52392}{}\index{partition\+Table@{partition\+Table}!begin\+Cylinder\+High@{begin\+Cylinder\+High}}
+\index{begin\+Cylinder\+High@{begin\+Cylinder\+High}!partition\+Table@{partition\+Table}}
+\subsubsection[{begin\+Cylinder\+High}]{\setlength{\rightskip}{0pt plus 5cm}unsigned partition\+Table\+::begin\+Cylinder\+High}\label{structpartition_table_a744f0c7f9ad4c426b10de085b4f52392}
+High bits cylinder for first block in partition. \hypertarget{structpartition_table_a941fcb4df298f5f73ccca011bf40787a}{}\index{partition\+Table@{partition\+Table}!begin\+Cylinder\+Low@{begin\+Cylinder\+Low}}
+\index{begin\+Cylinder\+Low@{begin\+Cylinder\+Low}!partition\+Table@{partition\+Table}}
+\subsubsection[{begin\+Cylinder\+Low}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::begin\+Cylinder\+Low}\label{structpartition_table_a941fcb4df298f5f73ccca011bf40787a}
+Combine begin\+Cylinder\+Low with begin\+Cylinder\+High. Legal values are 0-\/1023. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_a7d426694b8cf2151ae38568670a8c845}{}\index{partition\+Table@{partition\+Table}!begin\+Head@{begin\+Head}}
+\index{begin\+Head@{begin\+Head}!partition\+Table@{partition\+Table}}
+\subsubsection[{begin\+Head}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::begin\+Head}\label{structpartition_table_a7d426694b8cf2151ae38568670a8c845}
+Head part of Cylinder-\/head-\/sector address of the first block in the partition. Legal values are 0-\/255. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_ae201c11d9671c9efc307c654a2b6c026}{}\index{partition\+Table@{partition\+Table}!begin\+Sector@{begin\+Sector}}
+\index{begin\+Sector@{begin\+Sector}!partition\+Table@{partition\+Table}}
+\subsubsection[{begin\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}unsigned partition\+Table\+::begin\+Sector}\label{structpartition_table_ae201c11d9671c9efc307c654a2b6c026}
+Sector part of Cylinder-\/head-\/sector address of the first block in the partition. Legal values are 1-\/63. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_adf386afb1f33046d8b6a1a0afa780ec9}{}\index{partition\+Table@{partition\+Table}!boot@{boot}}
+\index{boot@{boot}!partition\+Table@{partition\+Table}}
+\subsubsection[{boot}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::boot}\label{structpartition_table_adf386afb1f33046d8b6a1a0afa780ec9}
+Boot Indicator . Indicates whether the volume is the active partition. Legal values include\+: 0\+X00. Do not use for booting. 0\+X80 Active partition. \hypertarget{structpartition_table_a32fea225b8ffd925ad919ffc56e9abda}{}\index{partition\+Table@{partition\+Table}!end\+Cylinder\+High@{end\+Cylinder\+High}}
+\index{end\+Cylinder\+High@{end\+Cylinder\+High}!partition\+Table@{partition\+Table}}
+\subsubsection[{end\+Cylinder\+High}]{\setlength{\rightskip}{0pt plus 5cm}unsigned partition\+Table\+::end\+Cylinder\+High}\label{structpartition_table_a32fea225b8ffd925ad919ffc56e9abda}
+High bits of end cylinder \hypertarget{structpartition_table_ad7829e34be70084abe145227b0d18274}{}\index{partition\+Table@{partition\+Table}!end\+Cylinder\+Low@{end\+Cylinder\+Low}}
+\index{end\+Cylinder\+Low@{end\+Cylinder\+Low}!partition\+Table@{partition\+Table}}
+\subsubsection[{end\+Cylinder\+Low}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::end\+Cylinder\+Low}\label{structpartition_table_ad7829e34be70084abe145227b0d18274}
+Combine end\+Cylinder\+Low with end\+Cylinder\+High. Legal values are 0-\/1023. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_a4a3945bfd3a29f474984cb9f180dbd51}{}\index{partition\+Table@{partition\+Table}!end\+Head@{end\+Head}}
+\index{end\+Head@{end\+Head}!partition\+Table@{partition\+Table}}
+\subsubsection[{end\+Head}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::end\+Head}\label{structpartition_table_a4a3945bfd3a29f474984cb9f180dbd51}
+head part of cylinder-\/head-\/sector address of the last sector in the partition. Legal values are 0-\/255. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_a27cdc4320c418ed0d833ab163ed77ad7}{}\index{partition\+Table@{partition\+Table}!end\+Sector@{end\+Sector}}
+\index{end\+Sector@{end\+Sector}!partition\+Table@{partition\+Table}}
+\subsubsection[{end\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}unsigned partition\+Table\+::end\+Sector}\label{structpartition_table_a27cdc4320c418ed0d833ab163ed77ad7}
+Sector part of cylinder-\/head-\/sector address of the last sector in the partition. Legal values are 1-\/63. Only used in old P\+C B\+I\+O\+S. \hypertarget{structpartition_table_a02bbdff840c854dc96fa0b6da8589d86}{}\index{partition\+Table@{partition\+Table}!first\+Sector@{first\+Sector}}
+\index{first\+Sector@{first\+Sector}!partition\+Table@{partition\+Table}}
+\subsubsection[{first\+Sector}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t partition\+Table\+::first\+Sector}\label{structpartition_table_a02bbdff840c854dc96fa0b6da8589d86}
+Logical block address of the first block in the partition. \hypertarget{structpartition_table_acf96e59ce648a9a0cf35751c3b6d7730}{}\index{partition\+Table@{partition\+Table}!total\+Sectors@{total\+Sectors}}
+\index{total\+Sectors@{total\+Sectors}!partition\+Table@{partition\+Table}}
+\subsubsection[{total\+Sectors}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t partition\+Table\+::total\+Sectors}\label{structpartition_table_acf96e59ce648a9a0cf35751c3b6d7730}
+Length of the partition, in blocks. \hypertarget{structpartition_table_a3861cf276c728c4dd30ca04e74197ee8}{}\index{partition\+Table@{partition\+Table}!type@{type}}
+\index{type@{type}!partition\+Table@{partition\+Table}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t partition\+Table\+::type}\label{structpartition_table_a3861cf276c728c4dd30ca04e74197ee8}
+Partition type. See defines that begin with P\+A\+R\+T\+\_\+\+T\+Y\+P\+E\+\_\+ for some Microsoft partition types. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Sources/\+Engduino\+S\+D/src/utility/\hyperlink{_fat_structs_8h}{Fat\+Structs.\+h}\end{DoxyCompactItemize}

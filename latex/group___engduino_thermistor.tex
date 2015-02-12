@@ -1,0 +1,165 @@
+\hypertarget{group___engduino_thermistor}{}\section{Driver for Engduino Thermistor}
+\label{group___engduino_thermistor}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_thermistor_8cpp}{Engduino\+Thermistor.\+cpp}
+\item 
+file \hyperlink{_engduino_thermistor_8h}{Engduino\+Thermistor.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_thermistor_ga54274b326bb7f99eee56adb7d955fd19}{}enum {\bfseries temperature\+Units} \{ {\bfseries C\+E\+L\+S\+I\+U\+S}, 
+{\bfseries K\+E\+L\+V\+I\+N}, 
+{\bfseries F\+A\+H\+R\+E\+N\+H\+E\+I\+T}
+ \}\label{group___engduino_thermistor_ga54274b326bb7f99eee56adb7d955fd19}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_thermistor_ga023a60a4d41f9cc75fda1f829dfaee95}{Engduino\+Thermistor\+Class\+::\+Engduino\+Thermistor\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_thermistor_gac1ece244525b24575f56c66398e06fb9}{Engduino\+Thermistor\+Class\+::begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_thermistor_ga63e9a55ac33ed1d150182c2f1ab3ba74}{Engduino\+Thermistor\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the L\+E\+Ds \end{DoxyCompactList}\item 
+float \hyperlink{group___engduino_thermistor_gae916afc1aab3688ec3f158e47a52e2ed}{Engduino\+Thermistor\+Class\+::temperature} (temperature\+Units units=C\+E\+L\+S\+I\+U\+S)
+\begin{DoxyCompactList}\small\item\em Get the temperature. \end{DoxyCompactList}\item 
+float \hyperlink{group___engduino_thermistor_ga84faa940b863fa388fafe0f1ba921f6e}{Engduino\+Thermistor\+Class\+::temperature} (temperature\+Units units, float B, float T0, float R0, float R\+\_\+\+Balance)
+\begin{DoxyCompactList}\small\item\em Get the temperature. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___engduino_thermistor_ga1fbfdfec60a80d3628b3494d81b93d53}{Engduino\+Thermistor\+Class\+::temperature\+Raw} ()
+\begin{DoxyCompactList}\small\item\em Get the raw potential divider reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_thermistor_ga7e4c6cf83e6b01f880665b2a23fde7d1}{}\hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class} {\bfseries Engduino\+Thermistor} = \hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class}()\label{group___engduino_thermistor_ga7e4c6cf83e6b01f880665b2a23fde7d1}
+
+\item 
+\hypertarget{group___engduino_thermistor_ga7e4c6cf83e6b01f880665b2a23fde7d1}{}\hyperlink{class_engduino_thermistor_class}{Engduino\+Thermistor\+Class} {\bfseries Engduino\+Thermistor}\label{group___engduino_thermistor_ga7e4c6cf83e6b01f880665b2a23fde7d1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the driver code for reading temperature. This can equally well be done in a sketch file, but it is also here for completeness
+
+The Engduino has a Murata N\+C\+P18\+W\+F104\+J03\+R\+B thermistor attached to analogue input A5. This thermistor has a resistance of 100\+K at 25\+C. 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_thermistor_gac1ece244525b24575f56c66398e06fb9}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Thermistor\+Class\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_gac1ece244525b24575f56c66398e06fb9}
+
+
+begin function -\/ must be called before using other functions 
+
+Nothing to be done. \hypertarget{group___engduino_thermistor_ga63e9a55ac33ed1d150182c2f1ab3ba74}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!end@{end}}
+\index{end@{end}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Thermistor\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_ga63e9a55ac33ed1d150182c2f1ab3ba74}
+
+
+end function -\/ switch off the L\+E\+Ds 
+
+Nothing to be done. \hypertarget{group___engduino_thermistor_ga023a60a4d41f9cc75fda1f829dfaee95}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!Engduino\+Thermistor\+Class@{Engduino\+Thermistor\+Class}}
+\index{Engduino\+Thermistor\+Class@{Engduino\+Thermistor\+Class}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{Engduino\+Thermistor\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Thermistor\+Class\+::\+Engduino\+Thermistor\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_ga023a60a4d41f9cc75fda1f829dfaee95}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_thermistor_gae916afc1aab3688ec3f158e47a52e2ed}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!temperature@{temperature}}
+\index{temperature@{temperature}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}float Engduino\+Thermistor\+Class\+::temperature (
+\begin{DoxyParamCaption}
+\item[{temperature\+Units}]{units = {\ttfamily CELSIUS}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_gae916afc1aab3688ec3f158e47a52e2ed}
+
+
+Get the temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & A choice between C\+E\+L\+S\+I\+U\+S (default), K\+E\+L\+V\+I\+N, or F\+A\+H\+R\+E\+N\+H\+E\+I\+T \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The temperature on the given scale.
+\end{DoxyReturn}
+This function makes a call to the function that actually works out what a particular resistance means.
+
+For the Murata N\+C\+P18\+W\+F104\+J03\+R\+B, the thermistor has a resistance of 100\+K at 25\+C and a B value of 4250 and a 100\+K balance resistor. \hypertarget{group___engduino_thermistor_ga84faa940b863fa388fafe0f1ba921f6e}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!temperature@{temperature}}
+\index{temperature@{temperature}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}float Engduino\+Thermistor\+Class\+::temperature (
+\begin{DoxyParamCaption}
+\item[{temperature\+Units}]{units, }
+\item[{float}]{B, }
+\item[{float}]{T0, }
+\item[{float}]{R0, }
+\item[{float}]{R\+\_\+\+Balance}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_ga84faa940b863fa388fafe0f1ba921f6e}
+
+
+Get the temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em units} & A choice between C\+E\+L\+S\+I\+U\+S (default), K\+E\+L\+V\+I\+N, or F\+A\+H\+R\+E\+N\+H\+E\+I\+T \\
+\hline
+{\em B} & Parameter in the B equation -\/ see data sheet \\
+\hline
+{\em T0} & Temperature in Kelvin at which resistance is R0 -\/ see data sheet \\
+\hline
+{\em R0} & Resistance at temperature T0 -\/ see data sheet \\
+\hline
+{\em R\+\_\+\+Balance} & Value of the balance resistor in the potential divider (100\+K on Engduino v1.\+0) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The temperature on the given scale.
+\end{DoxyReturn}
+This function measures the voltage and, as a consequence, calculates the resistance of the thermistor. From this, we can figure out the actual temperature
+
+N\+T\+C thermistors can be characterised with the B (or beta) parameter equation,
+
+1/\+T = 1/\+T0 + 1/\+B$\ast$ln(R/\+R0)
+
+Where the temperatures are in Kelvin and R0 is the resistance at temperature T0 (25 °\+C = 298.\+15 K).
+
+So far as the resistance is concerned, we have a potential divider with a balance resistor of value R\+\_\+\+Balance. Assuming that the resistance of the N\+T\+C is R and the voltage across it is V, then Ohms law gives\+: V/\+Vcc = R/(R + R\+\_\+\+Balance)
+
+Given that V/\+Vcc is just (analog in)/1024 for a 10 bit A\+D\+C, we can work out that\+: R = (R\+\_\+\+Balance $\ast$ analog\+In) / (1024 -\/ analog\+In) \hypertarget{group___engduino_thermistor_ga1fbfdfec60a80d3628b3494d81b93d53}{}\index{Driver for Engduino Thermistor@{Driver for Engduino Thermistor}!temperature\+Raw@{temperature\+Raw}}
+\index{temperature\+Raw@{temperature\+Raw}!Driver for Engduino Thermistor@{Driver for Engduino Thermistor}}
+\subsubsection[{temperature\+Raw}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Engduino\+Thermistor\+Class\+::temperature\+Raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_thermistor_ga1fbfdfec60a80d3628b3494d81b93d53}
+
+
+Get the raw potential divider reading. 
+
+\begin{DoxyReturn}{Returns}
+Raw potential divider reading.
+\end{DoxyReturn}
+Raw voltage reading from N\+T\+C potential divider circuit 

@@ -1,0 +1,215 @@
+\hypertarget{group___engduino_s_d}{}\section{Driver for Engduino S\+D card}
+\label{group___engduino_s_d}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_s_d_8cpp}{Engduino\+S\+D.\+cpp}
+\item 
+file \hyperlink{_engduino_s_d_8h}{Engduino\+S\+D.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_s_d_class}{Engduino\+S\+D\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_s_d_ga30d9b8759178d9c4b1fa253aa97f11a0}{}\#define {\bfseries D\+E\+B\+U\+G\+G}~0\label{group___engduino_s_d_ga30d9b8759178d9c4b1fa253aa97f11a0}
+
+\item 
+\hypertarget{group___engduino_s_d_ga1f9db1dc616fc2004e22f9f442bb212b}{}\#define {\bfseries P\+R\+I\+N\+T\+L\+N}(...)\label{group___engduino_s_d_ga1f9db1dc616fc2004e22f9f442bb212b}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_s_d_ga3f1f4d4ab1f7d9266d293ebd485ec02a}{Engduino\+S\+D\+Class\+::\+Engduino\+S\+D\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga5e6b57dac1ab9ba6de542adf0866d049}{Engduino\+S\+D\+Class\+::begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga2ef82f0b803d5f71436becb8f9a0e162}{Engduino\+S\+D\+Class\+::begin} (const char $\ast$filepath, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga2a5732a0ca8a4d67eb8584377eff03aa}{Engduino\+S\+D\+Class\+::open} (const char $\ast$filepath, uint8\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em open function \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga5955e04f63806f0ea11c9b754a62e8fc}{Engduino\+S\+D\+Class\+::close} ()
+\begin{DoxyCompactList}\small\item\em close function \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga609219465a1d1799c634dd30f4d85d4d}{Engduino\+S\+D\+Class\+::write} (const String \&)
+\begin{DoxyCompactList}\small\item\em write function \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga63ef24253f224cd4d99ac47fac745c7f}{Engduino\+S\+D\+Class\+::writeln} (const String \&)
+\begin{DoxyCompactList}\small\item\em writeln function \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_s_d_gae3d19c36792ef53fe572e763a77a93e5}{Engduino\+S\+D\+Class\+::available} ()
+\begin{DoxyCompactList}\small\item\em available function \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___engduino_s_d_ga7c333386f94dfd88ef309a685a7fa3db}{Engduino\+S\+D\+Class\+::read} ()
+\begin{DoxyCompactList}\small\item\em read function \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_ga700248981ca6e35f9d9c3b6ea71ae8c2}{Engduino\+S\+D\+Class\+::is\+Attached} ()
+\begin{DoxyCompactList}\small\item\em is\+Attached function \end{DoxyCompactList}\item 
+boolean \hyperlink{group___engduino_s_d_gaea10bd485fc67e6e44b96c12036098b5}{Engduino\+S\+D\+Class\+::is\+Initialized} ()
+\begin{DoxyCompactList}\small\item\em is\+Initialized function \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_s_d_gac381fbc074cacbada62e9bfac3470e26}{Engduino\+S\+D\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_s_d_ga504e9c789dec193099b514258fab3401}{}\hyperlink{class_engduino_s_d_class}{Engduino\+S\+D\+Class} {\bfseries Engduino\+S\+D} = \hyperlink{class_engduino_s_d_class}{Engduino\+S\+D\+Class}()\label{group___engduino_s_d_ga504e9c789dec193099b514258fab3401}
+
+\item 
+\hypertarget{group___engduino_s_d_ga504e9c789dec193099b514258fab3401}{}\hyperlink{class_engduino_s_d_class}{Engduino\+S\+D\+Class} {\bfseries Engduino\+S\+D}\label{group___engduino_s_d_ga504e9c789dec193099b514258fab3401}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This library aims to expose a subset of S\+D card functionality in the form of a higher level \char`\"{}wrapper\char`\"{} object.
+
+The Engduino has a micro S\+D card slot. Maximum size of attached S\+D card is 4\+G\+B. 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_s_d_gae3d19c36792ef53fe572e763a77a93e5}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!available@{available}}
+\index{available@{available}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{available}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+S\+D\+Class\+::available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_gae3d19c36792ef53fe572e763a77a93e5}
+
+
+available function 
+
+This function is used to check if there is still data to be read from file. \hypertarget{group___engduino_s_d_ga5e6b57dac1ab9ba6de542adf0866d049}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga5e6b57dac1ab9ba6de542adf0866d049}
+
+
+begin function -\/ must be called before using other functions 
+
+\begin{DoxyReturn}{Returns}
+True if initialization succeeds, false otherwise..
+\end{DoxyReturn}
+This function performs the initialisation required by the sdfatlib library. \hypertarget{group___engduino_s_d_ga2ef82f0b803d5f71436becb8f9a0e162}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::begin (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filepath, }
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga2ef82f0b803d5f71436becb8f9a0e162}
+
+
+begin function -\/ must be called before using other functions 
+
+\begin{DoxyReturn}{Returns}
+True if initialization succeeds, false otherwise..
+\end{DoxyReturn}
+This function performs the initialisation required by the sdfatlib library. \hypertarget{group___engduino_s_d_ga5955e04f63806f0ea11c9b754a62e8fc}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!close@{close}}
+\index{close@{close}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga5955e04f63806f0ea11c9b754a62e8fc}
+
+
+close function 
+
+\begin{DoxyReturn}{Returns}
+True if file open succeeds, false otherwise..
+\end{DoxyReturn}
+This function is used to close a file on the S\+D card. \hypertarget{group___engduino_s_d_gac381fbc074cacbada62e9bfac3470e26}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!end@{end}}
+\index{end@{end}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+S\+D\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_gac381fbc074cacbada62e9bfac3470e26}
+
+
+end function 
+
+Nothing to be done. \hypertarget{group___engduino_s_d_ga3f1f4d4ab1f7d9266d293ebd485ec02a}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!Engduino\+S\+D\+Class@{Engduino\+S\+D\+Class}}
+\index{Engduino\+S\+D\+Class@{Engduino\+S\+D\+Class}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{Engduino\+S\+D\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+S\+D\+Class\+::\+Engduino\+S\+D\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga3f1f4d4ab1f7d9266d293ebd485ec02a}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_s_d_ga700248981ca6e35f9d9c3b6ea71ae8c2}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!is\+Attached@{is\+Attached}}
+\index{is\+Attached@{is\+Attached}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{is\+Attached}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::is\+Attached (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga700248981ca6e35f9d9c3b6ea71ae8c2}
+
+
+is\+Attached function 
+
+This function is used to check if the S\+D card is plugged in. \hypertarget{group___engduino_s_d_gaea10bd485fc67e6e44b96c12036098b5}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!is\+Initialized@{is\+Initialized}}
+\index{is\+Initialized@{is\+Initialized}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{is\+Initialized}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::is\+Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_gaea10bd485fc67e6e44b96c12036098b5}
+
+
+is\+Initialized function 
+
+This function is used to return the initialization status of the S\+D card. \hypertarget{group___engduino_s_d_ga2a5732a0ca8a4d67eb8584377eff03aa}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!open@{open}}
+\index{open@{open}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::open (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filepath, }
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga2a5732a0ca8a4d67eb8584377eff03aa}
+
+
+open function 
+
+\begin{DoxyReturn}{Returns}
+True if file open succeeds, false otherwise..
+\end{DoxyReturn}
+This function is used to open a file on the S\+D card. \hypertarget{group___engduino_s_d_ga7c333386f94dfd88ef309a685a7fa3db}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!read@{read}}
+\index{read@{read}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Engduino\+S\+D\+Class\+::read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga7c333386f94dfd88ef309a685a7fa3db}
+
+
+read function 
+
+This function is used to read one character from opened file. \hypertarget{group___engduino_s_d_ga609219465a1d1799c634dd30f4d85d4d}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!write@{write}}
+\index{write@{write}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::write (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{str}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga609219465a1d1799c634dd30f4d85d4d}
+
+
+write function 
+
+This function is used to write string to the file. \hypertarget{group___engduino_s_d_ga63ef24253f224cd4d99ac47fac745c7f}{}\index{Driver for Engduino S\+D card@{Driver for Engduino S\+D card}!writeln@{writeln}}
+\index{writeln@{writeln}!Driver for Engduino S\+D card@{Driver for Engduino S\+D card}}
+\subsubsection[{writeln}]{\setlength{\rightskip}{0pt plus 5cm}boolean Engduino\+S\+D\+Class\+::writeln (
+\begin{DoxyParamCaption}
+\item[{const String \&}]{str}
+\end{DoxyParamCaption}
+)}\label{group___engduino_s_d_ga63ef24253f224cd4d99ac47fac745c7f}
+
+
+writeln function 
+
+This function is used to write string to the file with \char`\"{}goto new line\char`\"{} (~\newline
+) character. 

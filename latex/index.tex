@@ -1,0 +1,58 @@
+\begin{center}Copyright \copyright{} 2014 by Engduino Team \end{center} 
+
+The Engduino is an inexpensive Arduino clone that is intended primarily for teaching schoolchildren about programming and system development in a way that is engaging, fun and that can integrate with other parts of their curriculum.\+To make things relatively straightforward, we have hidden a lot of details about the hardware in libraries which can be called from within a sketch in a relatively simple and straightforward way. This is Doxygen-\/generated documentation that provides the essential documentation of library functionality. It is not intended for children learning to program, but it provides a point of reference for the more sophisticated developer.
+
+There are 9 libraries for the Engduino, corresponding to the hardware devices connected.\hypertarget{index_LEDs}{}\section{The L\+E\+Ds}\label{index_LEDs}
+The Engduino has 16 L\+E\+Ds with independent red, green and blue channels. The L\+E\+D driver is used to set the colour and brightness of the L\+E\+Ds.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_l_e_ds_class}{The Engduino L\+E\+D Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Button}{}\section{The Button}\label{index_Button}
+The Engduino has a single button. Unfortunately, when pressed, buttons bounce and so just reading the voltage on the pin connected to the button can be misleading. This library provides some code for \textquotesingle{}debouncing\textquotesingle{} -\/ in essence providing a reading of the button that is stable and accurately reflects whether it is pushed or not.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_button_class}{The Engduino Button Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Thermistor}{}\section{The Thermistor}\label{index_Thermistor}
+The Engduino has a thermistor -\/ which is a device whose resistance depends on the temperature. This is connected in such a way as to allow the Engduino to measure temperature. This library provides the ability to read the temperature in a number of forms\+: C\+E\+L\+S\+I\+U\+S (default), K\+E\+L\+V\+I\+N and F\+A\+R\+E\+N\+H\+E\+I\+T.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_thermistor_class}{The Engduino Thermistor Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Light}{}\section{The Light Sensor}\label{index_Light}
+The Engduino has a light sensor that is capable of measuring the amount of light it can see. This is a very simple library because the reading is taken from an analogue input and the value returned simply reflects the A\+D\+C reading on that input.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_light_class}{The Engduino Light Sensor Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Accelerometer}{}\section{The Accelerometer Sensor}\label{index_Accelerometer}
+The Engduino has a 3\+D accelerometer. As the name suggests, this allows one to read accelerations in each of 3 dimensions, which are defined in terms of the orientation of the accelerometer chip. This is a library that simply returns the acceleration in each of those three dimensions.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_accelerometer_class}{The Engduino Accelerometer Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_IR}{}\section{The I\+R}\label{index_IR}
+Finally, the Engduino has the ability to communicate with another Engduino wirelessly -\/ but using infra-\/red rather than radio, a bit like a remote control. The range of this communication is very short -\/ a metre or so -\/ but it is possible for the Engduino to pick up normal remote controls from a much greater distance.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_i_r_class}{The Engduino Infrared Communications Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Magnetometer}{}\section{The Magnetometer}\label{index_Magnetometer}
+The Engduino has a 3\+D magnetometer. As the name suggests, this allows one to read magnetic field strength in each of 3 dimensions, which are defined in terms of the orientation of the magnetometer chip. This is a library that simply returns the magnetic field in each of those three dimensions. However interpreting this data is challenging since the values are raw and uncalibrated.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_magnetometer_class}{The Engduino Magnetometer Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_SD}{}\section{The S\+D Card}\label{index_SD}
+The Engduino has a micro S\+D slot. S\+D card enables to save data on it and read them later when needed. It\textquotesingle{}s also enables read fro it different configurations used by your sketch. This library aims to expose a subset of S\+D card functionality in the form of a higher level \char`\"{}wrapper\char`\"{} object. Maximum size of attached S\+D card is 4\+G\+B.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_s_d_class}{The Engduino S\+D Card Documentation }
+\end{DoxySeeAlso}
+\hypertarget{index_Protocol}{}\section{The Protocol}\label{index_Protocol}
+The Engduino has a support for controlling it with the simple instructions set over the Serial or Bluetooth communication. Instructions can be send and receive over the Serial terminal on P\+C or over the Bluetooth terminal on smart device or P\+C. It\textquotesingle{}s enables hi-\/level communication between Engduino board and external programs like Matlab, applications written in Visual Studio, Java, etc. In the case of Bluetooth communication Bluetooth extension board for Engduino need to be used.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_engduino_protocol_class}{The Engduino Protocol Documentation } 
+\end{DoxySeeAlso}

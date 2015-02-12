@@ -1,0 +1,416 @@
+\hypertarget{group___engduino_magnetometer}{}\section{Driver for Engduino Magnetometer}
+\label{group___engduino_magnetometer}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_magnetometer_8cpp}{Engduino\+Magnetometer.\+cpp}
+\item 
+file \hyperlink{_engduino_magnetometer_8h}{Engduino\+Magnetometer.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_magnetometer_ga89fc89b079a62fd650c4dda7bcd41b5d}{}\#define {\bfseries F\+X\+M\+S3110\+\_\+\+I\+I\+C\+\_\+\+A\+D\+D\+R\+E\+S\+S}~(0x0\+E)\label{group___engduino_magnetometer_ga89fc89b079a62fd650c4dda7bcd41b5d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga2a541019f5599d1e919be1b5ebfe310d}{}\#define {\bfseries D\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+G}~0x00\label{group___engduino_magnetometer_ga2a541019f5599d1e919be1b5ebfe310d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gab7703c366de670a45f9742176ba14732}{}\#define {\bfseries Z\+Y\+X\+O\+W\+\_\+\+B\+I\+T}~Bit.\+\_\+7\label{group___engduino_magnetometer_gab7703c366de670a45f9742176ba14732}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga468c9f3650d1d44d8d42b1f1f9ec0efa}{}\#define {\bfseries Z\+O\+W\+\_\+\+B\+I\+T}~Bit.\+\_\+6\label{group___engduino_magnetometer_ga468c9f3650d1d44d8d42b1f1f9ec0efa}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga15c2c3bbe9c5a950688f8d3628d37e34}{}\#define {\bfseries Y\+O\+W\+\_\+\+B\+I\+T}~Bit.\+\_\+5\label{group___engduino_magnetometer_ga15c2c3bbe9c5a950688f8d3628d37e34}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa95771862960ad4abd45117a266e2041}{}\#define {\bfseries X\+O\+W\+\_\+\+B\+I\+T}~Bit.\+\_\+4\label{group___engduino_magnetometer_gaa95771862960ad4abd45117a266e2041}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gade7a6e74b28a08453c284ed8c6af1e38}{}\#define {\bfseries Z\+Y\+X\+D\+R\+\_\+\+B\+I\+T}~Bit.\+\_\+3\label{group___engduino_magnetometer_gade7a6e74b28a08453c284ed8c6af1e38}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaac7d3cc28a4c6514322fcf77d9e7c3c8}{}\#define {\bfseries Z\+D\+R\+\_\+\+B\+I\+T}~Bit.\+\_\+2\label{group___engduino_magnetometer_gaac7d3cc28a4c6514322fcf77d9e7c3c8}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gadfee82bf5f1805e6b129a8577093266d}{}\#define {\bfseries Y\+D\+R\+\_\+\+B\+I\+T}~Bit.\+\_\+1\label{group___engduino_magnetometer_gadfee82bf5f1805e6b129a8577093266d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga4b0444dc37cc17485bc161c77fda20bf}{}\#define {\bfseries X\+D\+R\+\_\+\+B\+I\+T}~Bit.\+\_\+0\label{group___engduino_magnetometer_ga4b0444dc37cc17485bc161c77fda20bf}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad7def7474eca7088e377f1f8f581cf3f}{}\#define {\bfseries Z\+Y\+X\+O\+W\+\_\+\+M\+A\+S\+K}~0x80\label{group___engduino_magnetometer_gad7def7474eca7088e377f1f8f581cf3f}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga261e5f0c013da97c85f0405848e97273}{}\#define {\bfseries Z\+O\+W\+\_\+\+M\+A\+S\+K}~0x40\label{group___engduino_magnetometer_ga261e5f0c013da97c85f0405848e97273}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga1452752e5c27f5f686a7dbc8bef60a7c}{}\#define {\bfseries Y\+O\+W\+\_\+\+M\+A\+S\+K}~0x20\label{group___engduino_magnetometer_ga1452752e5c27f5f686a7dbc8bef60a7c}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gae9f5c5577a02ae2a7d5a64b84c401f65}{}\#define {\bfseries X\+O\+W\+\_\+\+M\+A\+S\+K}~0x10\label{group___engduino_magnetometer_gae9f5c5577a02ae2a7d5a64b84c401f65}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaca5d29493fd7b36e58f29f43f702bf78}{}\#define {\bfseries Z\+Y\+X\+D\+R\+\_\+\+M\+A\+S\+K}~0x08\label{group___engduino_magnetometer_gaca5d29493fd7b36e58f29f43f702bf78}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga0df7e78fe052fe92d2eb617eb680ef88}{}\#define {\bfseries Z\+D\+R\+\_\+\+M\+A\+S\+K}~0x04\label{group___engduino_magnetometer_ga0df7e78fe052fe92d2eb617eb680ef88}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga2d052c40ee87dff13ad8e6a1f5196fad}{}\#define {\bfseries Y\+D\+R\+\_\+\+M\+A\+S\+K}~0x02\label{group___engduino_magnetometer_ga2d052c40ee87dff13ad8e6a1f5196fad}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gab0bc1b9c23521aeafd149a05a44f06e9}{}\#define {\bfseries X\+D\+R\+\_\+\+M\+A\+S\+K}~0x01\label{group___engduino_magnetometer_gab0bc1b9c23521aeafd149a05a44f06e9}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga27162dbc3c9450c93b54c3e7166ffc8a}{}\#define {\bfseries O\+U\+T\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x01\label{group___engduino_magnetometer_ga27162dbc3c9450c93b54c3e7166ffc8a}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gafbcce2c6cecf8155de05d14f6236f6db}{}\#define {\bfseries O\+U\+T\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x02\label{group___engduino_magnetometer_gafbcce2c6cecf8155de05d14f6236f6db}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga8ead756da3d889aecd4bcd7bdc4cd514}{}\#define {\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x03\label{group___engduino_magnetometer_ga8ead756da3d889aecd4bcd7bdc4cd514}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga16a310375b6e42dd0aac1509a175a99b}{}\#define {\bfseries O\+U\+T\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x04\label{group___engduino_magnetometer_ga16a310375b6e42dd0aac1509a175a99b}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gae332157badb7ef4d1eec938551b69ec2}{}\#define {\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x05\label{group___engduino_magnetometer_gae332157badb7ef4d1eec938551b69ec2}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga738dfefb73a106b3ea80d70262ca8e65}{}\#define {\bfseries O\+U\+T\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x06\label{group___engduino_magnetometer_ga738dfefb73a106b3ea80d70262ca8e65}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga7e23ffa5bb718d06bcee89bbdf844ed8}{}\#define {\bfseries W\+H\+O\+\_\+\+A\+M\+\_\+\+I\+\_\+\+R\+E\+G}~0x07\label{group___engduino_magnetometer_ga7e23ffa5bb718d06bcee89bbdf844ed8}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga58e92ea1bea65f1e9c9d6861cc93d781}{}\#define {\bfseries F\+X\+M\+S3110}~0x\+C4\label{group___engduino_magnetometer_ga58e92ea1bea65f1e9c9d6861cc93d781}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga29b48b7419a947fc14f5042aa65c65f4}{}\#define {\bfseries S\+Y\+S\+M\+O\+D\+\_\+\+R\+E\+G}~0x08\label{group___engduino_magnetometer_ga29b48b7419a947fc14f5042aa65c65f4}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gab2221c31d55c4492c95e76f2816cda7e}{}\#define {\bfseries S\+Y\+S\+M\+O\+D1\+\_\+\+B\+I\+T}~Bit.\+\_\+1\label{group___engduino_magnetometer_gab2221c31d55c4492c95e76f2816cda7e}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga4d5e8a6d211ac07ace94f8a3622f3d12}{}\#define {\bfseries S\+Y\+S\+M\+O\+D0\+\_\+\+B\+I\+T}~Bit.\+\_\+0\label{group___engduino_magnetometer_ga4d5e8a6d211ac07ace94f8a3622f3d12}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga382c00060d6171a433807a8c448d5b6a}{}\#define {\bfseries S\+Y\+S\+M\+O\+D1\+\_\+\+M\+A\+S\+K}~0x02\label{group___engduino_magnetometer_ga382c00060d6171a433807a8c448d5b6a}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga678ea73cfd96e13d2537a4e6eef951d3}{}\#define {\bfseries S\+Y\+S\+M\+O\+D0\+\_\+\+M\+A\+S\+K}~0x01\label{group___engduino_magnetometer_ga678ea73cfd96e13d2537a4e6eef951d3}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa66a0043994cab9834abb7bd2465b1ca}{}\#define {\bfseries S\+Y\+S\+M\+O\+D\+\_\+\+M\+A\+S\+K}~0x03\label{group___engduino_magnetometer_gaa66a0043994cab9834abb7bd2465b1ca}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga3d69858198a4c3d57c5b4c2c36bc6931}{}\#define {\bfseries S\+Y\+S\+M\+O\+D\+\_\+\+S\+T\+A\+N\+D\+B\+Y}~0x00\label{group___engduino_magnetometer_ga3d69858198a4c3d57c5b4c2c36bc6931}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga9da77290f7046b752f3ccbcd42783953}{}\#define {\bfseries S\+Y\+S\+M\+O\+D\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+R\+A\+W}~(S\+Y\+S\+M\+O\+D0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga9da77290f7046b752f3ccbcd42783953}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga7e78b673673f4cf65ecfe96e4ff84503}{}\#define {\bfseries S\+Y\+S\+M\+O\+D\+\_\+\+A\+C\+T\+I\+V\+E\+\_\+\+U\+S\+E\+R}~(S\+Y\+S\+M\+O\+D1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga7e78b673673f4cf65ecfe96e4ff84503}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gab4c6399e357150222fea6de9ab8df513}{}\#define {\bfseries O\+F\+F\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x09\label{group___engduino_magnetometer_gab4c6399e357150222fea6de9ab8df513}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gab4c6399e357150222fea6de9ab8df513}{}\#define {\bfseries O\+F\+F\+\_\+\+X\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x0\+F\label{group___engduino_magnetometer_gab4c6399e357150222fea6de9ab8df513}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa5d47a5e3777c067b5d76164e60f045f}{}\#define {\bfseries O\+F\+F\+\_\+\+X\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x0\+A\label{group___engduino_magnetometer_gaa5d47a5e3777c067b5d76164e60f045f}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gac09bbd33c5b5e53fb8ed35bf8b8e32af}{}\#define {\bfseries O\+F\+F\+\_\+\+Y\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x0\+B\label{group___engduino_magnetometer_gac09bbd33c5b5e53fb8ed35bf8b8e32af}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga86c3147c7be595916a83b5760fd05bf2}{}\#define {\bfseries O\+F\+F\+\_\+\+Y\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x0\+C\label{group___engduino_magnetometer_ga86c3147c7be595916a83b5760fd05bf2}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaafca482298802d4f4adf714143c7d45e}{}\#define {\bfseries O\+F\+F\+\_\+\+Z\+\_\+\+M\+S\+B\+\_\+\+R\+E\+G}~0x0\+D\label{group___engduino_magnetometer_gaafca482298802d4f4adf714143c7d45e}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga35c616e2f48ce925aaa97d429a15184d}{}\#define {\bfseries O\+F\+F\+\_\+\+Z\+\_\+\+L\+S\+B\+\_\+\+R\+E\+G}~0x0\+E\label{group___engduino_magnetometer_ga35c616e2f48ce925aaa97d429a15184d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gabd83ea49367ca7850ffc9091890aa46b}{}\#define {\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G1}~0x10\label{group___engduino_magnetometer_gabd83ea49367ca7850ffc9091890aa46b}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga97f6dd43414219575ef19ac50698135d}{}\#define {\bfseries D\+R2\+\_\+\+B\+I\+T}~Bit.\+\_\+7\label{group___engduino_magnetometer_ga97f6dd43414219575ef19ac50698135d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga26e3ff4a7107a97638c3728b667db9cf}{}\#define {\bfseries D\+R1\+\_\+\+B\+I\+T}~Bit.\+\_\+6\label{group___engduino_magnetometer_ga26e3ff4a7107a97638c3728b667db9cf}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga87d658ca674904b4d14041dff163217d}{}\#define {\bfseries D\+R0\+\_\+\+B\+I\+T}~Bit.\+\_\+5\label{group___engduino_magnetometer_ga87d658ca674904b4d14041dff163217d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad084500be7b67c0c29c25a17820c5fc0}{}\#define {\bfseries O\+S1\+\_\+\+B\+I\+T}~Bit.\+\_\+4\label{group___engduino_magnetometer_gad084500be7b67c0c29c25a17820c5fc0}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa61fa4a43a92919863ba52345d5b58b4}{}\#define {\bfseries O\+S0\+\_\+\+B\+I\+T}~Bit.\+\_\+3\label{group___engduino_magnetometer_gaa61fa4a43a92919863ba52345d5b58b4}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaaa624908f37bdb21e6a2c58d23c9b433}{}\#define {\bfseries F\+R\+E\+A\+D\+\_\+\+B\+I\+T}~Bit.\+\_\+2\label{group___engduino_magnetometer_gaaa624908f37bdb21e6a2c58d23c9b433}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad3185a99cf929316eb207b7f571b015d}{}\#define {\bfseries T\+M\+\_\+\+B\+I\+T}~Bit.\+\_\+1\label{group___engduino_magnetometer_gad3185a99cf929316eb207b7f571b015d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga4bb2c326ba2a4af6ff6a6a52e4fb3ad9}{}\#define {\bfseries A\+C\+T\+I\+V\+E\+\_\+\+B\+I\+T}~Bit.\+\_\+0\label{group___engduino_magnetometer_ga4bb2c326ba2a4af6ff6a6a52e4fb3ad9}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaef613a25ad8ae87035fdec40f588821d}{}\#define {\bfseries D\+R2\+\_\+\+M\+A\+S\+K}~0x80\label{group___engduino_magnetometer_gaef613a25ad8ae87035fdec40f588821d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaf624a238f5d2ca404d5fa3e0b4b02612}{}\#define {\bfseries D\+R1\+\_\+\+M\+A\+S\+K}~0x40\label{group___engduino_magnetometer_gaf624a238f5d2ca404d5fa3e0b4b02612}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa9ed8de0800a936050e4b494b08316b7}{}\#define {\bfseries D\+R0\+\_\+\+M\+A\+S\+K}~0x20\label{group___engduino_magnetometer_gaa9ed8de0800a936050e4b494b08316b7}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gae1fe6782117dddbd1fd1a360183aa135}{}\#define {\bfseries O\+S1\+\_\+\+M\+A\+S\+K}~0x10\label{group___engduino_magnetometer_gae1fe6782117dddbd1fd1a360183aa135}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga3149b3774b8610f88c837175aefcae3b}{}\#define {\bfseries O\+S0\+\_\+\+M\+A\+S\+K}~0x08\label{group___engduino_magnetometer_ga3149b3774b8610f88c837175aefcae3b}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga4130f0c91840f53a50d9a2cba907aa68}{}\#define {\bfseries F\+R\+E\+A\+D\+\_\+\+M\+A\+S\+K}~0x04\label{group___engduino_magnetometer_ga4130f0c91840f53a50d9a2cba907aa68}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga6b6638b0329f8b06512fa3bf3bd9c12b}{}\#define {\bfseries T\+M\+\_\+\+M\+A\+S\+K}~0x02\label{group___engduino_magnetometer_ga6b6638b0329f8b06512fa3bf3bd9c12b}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga90ead4bf6feaa427557042487e46e680}{}\#define {\bfseries A\+C\+T\+I\+V\+E\+\_\+\+M\+A\+S\+K}~0x01\label{group___engduino_magnetometer_ga90ead4bf6feaa427557042487e46e680}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaf304dbcbd80600a1b5a4f0ba808a8e01}{}\#define {\bfseries D\+R\+\_\+\+M\+A\+S\+K}~(D\+R2\+\_\+\+M\+A\+S\+K+D\+R1\+\_\+\+M\+A\+S\+K+D\+R0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gaf304dbcbd80600a1b5a4f0ba808a8e01}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gacbe429b2ea406cc08b17ea0c73a578b6}{}\#define {\bfseries O\+S\+\_\+\+M\+A\+S\+K}~(O\+S1\+\_\+\+M\+A\+S\+K+O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gacbe429b2ea406cc08b17ea0c73a578b6}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaebe9f1262b7dfe43b60f9f6d9a93ebc1}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+1280\+\_\+16}~0x00\label{group___engduino_magnetometer_gaebe9f1262b7dfe43b60f9f6d9a93ebc1}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad5a2444f2fbb521c94082080ee2f1f50}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+1280\+\_\+32}~(O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gad5a2444f2fbb521c94082080ee2f1f50}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gacf842ec023894c2171118d2dac565317}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+1280\+\_\+64}~(O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gacf842ec023894c2171118d2dac565317}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad18984572b8e2bea72ff902c015a4d40}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+1280\+\_\+128}~(O\+S0\+\_\+\+M\+A\+S\+K+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gad18984572b8e2bea72ff902c015a4d40}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaf14a633b15eb986afd58a858ef180b1e}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+640\+\_\+16}~(D\+R0)\label{group___engduino_magnetometer_gaf14a633b15eb986afd58a858ef180b1e}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gafbd312e7cd3d797fc214ff5269d75096}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+640\+\_\+32}~(D\+R0+O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gafbd312e7cd3d797fc214ff5269d75096}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga6591943e61946f0cc555ce82136c9b69}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+640\+\_\+64}~(D\+R0+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga6591943e61946f0cc555ce82136c9b69}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gae99b4458e78d39eb296768d66b63c23c}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+640\+\_\+128}~(D\+R0+O\+S0\+\_\+\+M\+A\+S\+K+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gae99b4458e78d39eb296768d66b63c23c}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga54d9bb3ee7bf90f16264788c362dc659}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+320\+\_\+16}~(D\+R1)\label{group___engduino_magnetometer_ga54d9bb3ee7bf90f16264788c362dc659}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga4d71cc5332158a92d2256ed74a279f60}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+320\+\_\+32}~(D\+R1+O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga4d71cc5332158a92d2256ed74a279f60}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gacab93f67555c10cd4fade84047b1a8b5}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+320\+\_\+64}~(D\+R1+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gacab93f67555c10cd4fade84047b1a8b5}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga950992a74a88b08c067a304d289fa96e}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+320\+\_\+128}~(D\+R1+O\+S0\+\_\+\+M\+A\+S\+K+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga950992a74a88b08c067a304d289fa96e}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gad11ef490c346f1ee3c53d64c10bce270}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+160\+\_\+16}~(D\+R0+D\+R1)\label{group___engduino_magnetometer_gad11ef490c346f1ee3c53d64c10bce270}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga06e450d3a715ac07b4b349c445e10861}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+160\+\_\+32}~(D\+R0+D\+R1+O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga06e450d3a715ac07b4b349c445e10861}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga48555f15b05697aa90e19818e0bb3437}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+160\+\_\+64}~(D\+R0+D\+R1+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga48555f15b05697aa90e19818e0bb3437}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga2af901ccfa1c28dd55555235494307a0}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+160\+\_\+128}~(D\+R0+D\+R1+O\+S0\+\_\+\+M\+A\+S\+K+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga2af901ccfa1c28dd55555235494307a0}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga50bd5d9b7117c7ac29db6215781e83a5}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+80\+\_\+16}~(D\+R2)\label{group___engduino_magnetometer_ga50bd5d9b7117c7ac29db6215781e83a5}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaf0bab21f103ce9974c9e9c8feca3935a}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+80\+\_\+32}~(D\+R2+O\+S0\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_gaf0bab21f103ce9974c9e9c8feca3935a}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga7852d6803e680d4bd33a58b45bb297e7}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+80\+\_\+64}~(D\+R2+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga7852d6803e680d4bd33a58b45bb297e7}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga405a13abb78f90cdc6cc1d6a8bf47b58}{}\#define {\bfseries D\+A\+T\+A\+\_\+\+R\+A\+T\+E\+\_\+80\+\_\+128}~(D\+R2+O\+S0\+\_\+\+M\+A\+S\+K+O\+S1\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga405a13abb78f90cdc6cc1d6a8bf47b58}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga38bee0f550fdf421de09e1185406329c}{}\#define {\bfseries T\+R\+I\+G\+G\+E\+R\+\_\+\+O\+F\+F}~0x00\label{group___engduino_magnetometer_ga38bee0f550fdf421de09e1185406329c}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga9d07e6faced662060a2bcd36c4036e74}{}\#define {\bfseries T\+R\+I\+G\+G\+E\+R\+\_\+\+O\+N}~(A\+C\+T\+I\+V\+E\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga9d07e6faced662060a2bcd36c4036e74}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga3a6d3cd70078e6046471ec528a09cd19}{}\#define {\bfseries A\+C\+T\+I\+V\+E}~(A\+C\+T\+I\+V\+E\+\_\+\+M\+A\+S\+K)\label{group___engduino_magnetometer_ga3a6d3cd70078e6046471ec528a09cd19}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga42d8551dd3f10de6540de8a6fdf05a37}{}\#define {\bfseries S\+T\+A\+N\+D\+B\+Y}~0x00\label{group___engduino_magnetometer_ga42d8551dd3f10de6540de8a6fdf05a37}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gafd5ce55297b11bfc3c750a359b80de46}{}\#define {\bfseries C\+T\+R\+L\+\_\+\+R\+E\+G2}~0x11\label{group___engduino_magnetometer_gafd5ce55297b11bfc3c750a359b80de46}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa15f474ac97dfeba7c267dc21f7c2b43}{}\#define {\bfseries A\+U\+T\+O\+\_\+\+M\+R\+S\+T\+\_\+\+E\+N\+\_\+\+B\+I\+T}~Bit.\+\_\+7\label{group___engduino_magnetometer_gaa15f474ac97dfeba7c267dc21f7c2b43}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaa53f464f1027ec6bb01ac2b155828a43}{}\#define {\bfseries R\+A\+W\+\_\+\+B\+I\+T}~Bit.\+\_\+5\label{group___engduino_magnetometer_gaa53f464f1027ec6bb01ac2b155828a43}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga70c2ed25dc7891ddaa3ef56199238413}{}\#define {\bfseries M\+A\+G\+\_\+\+R\+S\+T\+\_\+\+B\+I\+T}~Bit.\+\_\+4\label{group___engduino_magnetometer_ga70c2ed25dc7891ddaa3ef56199238413}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gacad1685470397fd00ad67d2495b7cf5d}{}\#define {\bfseries A\+U\+T\+O\+\_\+\+M\+R\+S\+T\+\_\+\+E\+N\+\_\+\+M\+A\+S\+K}~0x80\label{group___engduino_magnetometer_gacad1685470397fd00ad67d2495b7cf5d}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gaf0de49848c597a2cda57966241c347af}{}\#define {\bfseries R\+A\+W\+\_\+\+M\+A\+S\+K}~0x20\label{group___engduino_magnetometer_gaf0de49848c597a2cda57966241c347af}
+
+\item 
+\hypertarget{group___engduino_magnetometer_ga26a1a4c1a37911e086b2de27aeedbd29}{}\#define {\bfseries M\+A\+G\+\_\+\+R\+S\+T\+\_\+\+M\+A\+S\+K}~0x10\label{group___engduino_magnetometer_ga26a1a4c1a37911e086b2de27aeedbd29}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_magnetometer_gadf764cbdea00d65edcd07bb9953ad2b7}{}enum \{ \\*
+{\bfseries F\+X\+M\+S3110\+\_\+\+D\+R\+\_\+\+S\+T\+A\+T\+U\+S} = 0, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+M\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+X\+\_\+\+L\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+\+M\+S\+B}, 
+\\*
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+Y\+\_\+l\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+M\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+U\+T\+\_\+\+Z\+\_\+\+L\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+W\+H\+O\+\_\+\+A\+M\+\_\+\+I}, 
+\\*
+{\bfseries F\+X\+M\+S3110\+\_\+\+S\+Y\+S\+M\+O\+D}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+X\+\_\+\+M\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+X\+\_\+\+L\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+Y\+\_\+\+M\+S\+B}, 
+\\*
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+Y\+\_\+\+L\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+Z\+\_\+\+M\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+O\+F\+F\+\_\+\+Z\+\_\+\+L\+S\+B}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+D\+I\+E\+\_\+\+T\+E\+M\+P}, 
+\\*
+{\bfseries F\+X\+M\+S3110\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1}, 
+{\bfseries F\+X\+M\+S3110\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G2}
+ \}\label{group___engduino_magnetometer_gadf764cbdea00d65edcd07bb9953ad2b7}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_magnetometer_gae1071725c5dd446f23764ef3baf41ff8}{Engduino\+Magnetometer\+Class\+::\+Engduino\+Magnetometer\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_magnetometer_gac9cf25d9dd4ea77000eb389b4ddc9614}{Engduino\+Magnetometer\+Class\+::begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_magnetometer_gabcb49e5bf9097ea614aae4383a38e345}{Engduino\+Magnetometer\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the magnetometer \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_magnetometer_gaaaa9c673b8daec5cf36c12ee695cb2f8}{Engduino\+Magnetometer\+Class\+::xyz} (float buf\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Read the xyz values from the magnetometer. \end{DoxyCompactList}\item 
+int8\+\_\+t \hyperlink{group___engduino_magnetometer_gaef57b103d9bae9612d14c42136a1753f}{Engduino\+Magnetometer\+Class\+::temperature} ()
+\begin{DoxyCompactList}\small\item\em Read the temperature value from the magnetometer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_magnetometer_gae048dec406d33e42a8725abff3af51e2}{}\hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class} {\bfseries Engduino\+Magnetometer} = \hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class}()\label{group___engduino_magnetometer_gae048dec406d33e42a8725abff3af51e2}
+
+\item 
+\hypertarget{group___engduino_magnetometer_gae048dec406d33e42a8725abff3af51e2}{}\hyperlink{class_engduino_magnetometer_class}{Engduino\+Magnetometer\+Class} {\bfseries Engduino\+Magnetometer}\label{group___engduino_magnetometer_gae048dec406d33e42a8725abff3af51e2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the driver code for Magnetometer on the Engduino In v2.\+1 this magnetometer is a freescale F\+X\+M\+S3110 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_magnetometer_gac9cf25d9dd4ea77000eb389b4ddc9614}{}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Magnetometer\+Class\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_magnetometer_gac9cf25d9dd4ea77000eb389b4ddc9614}
+
+
+begin function -\/ must be called before using other functions 
+
+This function enables the magnetometer. The magnetometer is an I2\+C device so we initialise the I2\+C communications, make contact with the magnetometer, and check that it\textquotesingle{}s what we think it is.
+
+We set the sampling rate to 10\+Hz, but where the values are from a heavily oversampled set of values \hypertarget{group___engduino_magnetometer_gabcb49e5bf9097ea614aae4383a38e345}{}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}!end@{end}}
+\index{end@{end}!Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Magnetometer\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_magnetometer_gabcb49e5bf9097ea614aae4383a38e345}
+
+
+end function -\/ switch off the magnetometer 
+
+Send the magnetometer to sleep \hypertarget{group___engduino_magnetometer_gae1071725c5dd446f23764ef3baf41ff8}{}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}!Engduino\+Magnetometer\+Class@{Engduino\+Magnetometer\+Class}}
+\index{Engduino\+Magnetometer\+Class@{Engduino\+Magnetometer\+Class}!Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsubsection[{Engduino\+Magnetometer\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Magnetometer\+Class\+::\+Engduino\+Magnetometer\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_magnetometer_gae1071725c5dd446f23764ef3baf41ff8}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_magnetometer_gaef57b103d9bae9612d14c42136a1753f}{}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}!temperature@{temperature}}
+\index{temperature@{temperature}!Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}int8\+\_\+t Engduino\+Magnetometer\+Class\+::temperature (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_magnetometer_gaef57b103d9bae9612d14c42136a1753f}
+
+
+Read the temperature value from the magnetometer. 
+
+\begin{DoxyReturn}{Returns}
+The 8 bit temperature value in 2s complement -\/ values lie between -\/40°\+C and 125°\+C, but are uncalibrated.
+\end{DoxyReturn}
+Get the temperature as measured by the magnetometer -\/ the temperature of the die. The register contains the die temperature in degrees C expressed as an 8-\/bit 2\textquotesingle{}s complement number. The sensitivity of the temperature sensor is factory trimmed to 1°\+C/\+L\+S\+B. The temperature sensor offset is not factory trimmed and must be calibrated by the user software if higher absolute accuracy is required. Note\+: The register allows for temperature measurements from -\/128°\+C to 127°\+C but the output range is limited to -\/40°\+C to 125°\+C. The temperature data is updated on every measurement cycle. \hypertarget{group___engduino_magnetometer_gaaaa9c673b8daec5cf36c12ee695cb2f8}{}\index{Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}!xyz@{xyz}}
+\index{xyz@{xyz}!Driver for Engduino Magnetometer@{Driver for Engduino Magnetometer}}
+\subsubsection[{xyz}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Magnetometer\+Class\+::xyz (
+\begin{DoxyParamCaption}
+\item[{float}]{buf\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_magnetometer_gaaaa9c673b8daec5cf36c12ee695cb2f8}
+
+
+Read the xyz values from the magnetometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & A buffer of floats to put the magnetometer values into\\
+\hline
+\end{DoxyParams}
+Get the instantaneous magnetometer values for the xyz axes. Convert the 16 bit digital value to a float value. 

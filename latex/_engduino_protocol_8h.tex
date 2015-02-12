@@ -1,0 +1,202 @@
+\hypertarget{_engduino_protocol_8h}{}\section{Sources/\+Engduino\+Protocol/src/\+Engduino\+Protocol.h File Reference}
+\label{_engduino_protocol_8h}\index{Sources/\+Engduino\+Protocol/src/\+Engduino\+Protocol.\+h@{Sources/\+Engduino\+Protocol/src/\+Engduino\+Protocol.\+h}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+L\+E\+Ds.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+Thermistor.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+Accelerometer.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+Magnetometer.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+Light.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+Button.\+h$>$}\\*
+{\ttfamily \#include $<$Engduino\+I\+R.\+h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_engduino_package}{Engduino\+Package}
+\item 
+class \hyperlink{class_engduino_protocol_class}{Engduino\+Protocol\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_protocol_ga1c6d5de492ac61ad29aec7aa9a436bbf}{}\#define {\bfseries V\+E\+R\+S\+I\+O\+N}~30\label{group___engduino_protocol_ga1c6d5de492ac61ad29aec7aa9a436bbf}
+
+\item 
+\hypertarget{group___engduino_protocol_ga47be49f3ef02b7a56e854d30403936c6}{}\#define {\bfseries C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+P\+C\+\_\+\+T\+E\+R\+M\+I\+N\+A\+L}~1\label{group___engduino_protocol_ga47be49f3ef02b7a56e854d30403936c6}
+
+\item 
+\hypertarget{group___engduino_protocol_gadb24326f10f104c32b6d7fb73e5701ff}{}\#define {\bfseries C\+O\+M\+M\+U\+N\+I\+C\+A\+T\+I\+O\+N\+\_\+\+B\+T\+\_\+\+M\+O\+D\+U\+L\+E}~2\label{group___engduino_protocol_gadb24326f10f104c32b6d7fb73e5701ff}
+
+\item 
+\hypertarget{group___engduino_protocol_ga12d62278c7072cab5d977ea9e430cfcd}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+L\+E\+D\+S}~10\label{group___engduino_protocol_ga12d62278c7072cab5d977ea9e430cfcd}
+
+\item 
+\hypertarget{group___engduino_protocol_gacc57d94492c9cd3a63f1cd3b888a3bdd}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+L\+E\+D}~11\label{group___engduino_protocol_gacc57d94492c9cd3a63f1cd3b888a3bdd}
+
+\item 
+\hypertarget{group___engduino_protocol_ga00602784fc6a871039642faf917bc1b4}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+D\+I\+G\+I\+T\+A\+L\+\_\+\+T\+Y\+P\+E}~20\label{group___engduino_protocol_ga00602784fc6a871039642faf917bc1b4}
+
+\item 
+\hypertarget{group___engduino_protocol_ga7096976025554b888271dac1a94c0f26}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+A\+N\+A\+L\+O\+G\+\_\+\+T\+Y\+P\+E}~21\label{group___engduino_protocol_ga7096976025554b888271dac1a94c0f26}
+
+\item 
+\hypertarget{group___engduino_protocol_gab4256b842ab397c49007bee04641ffbf}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+D\+I\+G\+I\+T\+A\+L}~22\label{group___engduino_protocol_gab4256b842ab397c49007bee04641ffbf}
+
+\item 
+\hypertarget{group___engduino_protocol_ga6a8feac4022d07edd3483c43e013a4ad}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+A\+N\+A\+L\+O\+G}~23\label{group___engduino_protocol_ga6a8feac4022d07edd3483c43e013a4ad}
+
+\item 
+\hypertarget{group___engduino_protocol_ga0c4c40c25683c982cb3091259659d091}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+I\+R}~40\label{group___engduino_protocol_ga0c4c40c25683c982cb3091259659d091}
+
+\item 
+\hypertarget{group___engduino_protocol_ga12b42e8896ffd1470d9e2ca085d0f4f2}{}\#define {\bfseries C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S}~90\label{group___engduino_protocol_ga12b42e8896ffd1470d9e2ca085d0f4f2}
+
+\item 
+\hypertarget{group___engduino_protocol_ga7f1cef9d8de3da524d788fc6e009540c}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N}~100\label{group___engduino_protocol_ga7f1cef9d8de3da524d788fc6e009540c}
+
+\item 
+\hypertarget{group___engduino_protocol_ga5f6af6a2b71d8ca4caa93a714b2880f2}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+S\+E\+N\+S\+O\+R\+S}~110\label{group___engduino_protocol_ga5f6af6a2b71d8ca4caa93a714b2880f2}
+
+\item 
+\hypertarget{group___engduino_protocol_ga33bb75393ec2321363d229f3cbed2467}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E}~111\label{group___engduino_protocol_ga33bb75393ec2321363d229f3cbed2467}
+
+\item 
+\hypertarget{group___engduino_protocol_ga5c4d56c592188f76f959e3e7b13e95dd}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R}~112\label{group___engduino_protocol_ga5c4d56c592188f76f959e3e7b13e95dd}
+
+\item 
+\hypertarget{group___engduino_protocol_ga3de2e3d999239e70733834e1581a08d8}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+M\+A\+G\+N\+E\+T\+O\+M\+E\+T\+E\+R}~113\label{group___engduino_protocol_ga3de2e3d999239e70733834e1581a08d8}
+
+\item 
+\hypertarget{group___engduino_protocol_ga478b77772ea8d56620437a726b1c0721}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+L\+I\+G\+H\+T}~114\label{group___engduino_protocol_ga478b77772ea8d56620437a726b1c0721}
+
+\item 
+\hypertarget{group___engduino_protocol_ga9c2381513cc4952108d57cad8a900ef3}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+B\+U\+T\+T\+O\+N}~120\label{group___engduino_protocol_ga9c2381513cc4952108d57cad8a900ef3}
+
+\item 
+\hypertarget{group___engduino_protocol_ga589c66445de10d4c0eb102b67ddc4e0e}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+I\+N\+P\+U\+T\+\_\+\+D\+I\+G\+I\+T\+A\+L}~130\label{group___engduino_protocol_ga589c66445de10d4c0eb102b67ddc4e0e}
+
+\item 
+\hypertarget{group___engduino_protocol_gaba8dbf65f123488c4ddb7fe8165a8b33}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+I\+N\+P\+U\+T\+\_\+\+A\+N\+A\+L\+O\+G}~131\label{group___engduino_protocol_gaba8dbf65f123488c4ddb7fe8165a8b33}
+
+\item 
+\hypertarget{group___engduino_protocol_ga745cae6ed5beb19a094c7eb57d25748d}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+I\+R}~160\label{group___engduino_protocol_ga745cae6ed5beb19a094c7eb57d25748d}
+
+\item 
+\hypertarget{group___engduino_protocol_ga9842a689fbf38c7211743ebb820b185c}{}\#define {\bfseries C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+S\+T\+A\+T\+U\+S}~190\label{group___engduino_protocol_ga9842a689fbf38c7211743ebb820b185c}
+
+\item 
+\hypertarget{group___engduino_protocol_ga0c36736eb8295a8e68fe9fadcdf05a34}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1}~1\label{group___engduino_protocol_ga0c36736eb8295a8e68fe9fadcdf05a34}
+
+\item 
+\hypertarget{group___engduino_protocol_gaab072fe48f6582fbd93d46d9500ac3a9}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+2}~2\label{group___engduino_protocol_gaab072fe48f6582fbd93d46d9500ac3a9}
+
+\item 
+\hypertarget{group___engduino_protocol_ga6e792782a06c8f35f19aa014ef944340}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+3}~3\label{group___engduino_protocol_ga6e792782a06c8f35f19aa014ef944340}
+
+\item 
+\hypertarget{group___engduino_protocol_ga7d3e82a54524c81775c29fe4a5755144}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E}~0\label{group___engduino_protocol_ga7d3e82a54524c81775c29fe4a5755144}
+
+\item 
+\hypertarget{group___engduino_protocol_gaab64f7009fad88a94edab1632981002f}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+D}~1\label{group___engduino_protocol_gaab64f7009fad88a94edab1632981002f}
+
+\item 
+\hypertarget{group___engduino_protocol_ga3c3d2e608ff5e5d2b69b5d3c3981530f}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+T\+H}~156\label{group___engduino_protocol_ga3c3d2e608ff5e5d2b69b5d3c3981530f}
+
+\item 
+\hypertarget{group___engduino_protocol_ga134da01c6d7e220003b4070a407e7187}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+M\+A\+X\+N\+R\+\_\+\+V\+A\+L\+U\+E\+S}~56\label{group___engduino_protocol_ga134da01c6d7e220003b4070a407e7187}
+
+\item 
+\hypertarget{group___engduino_protocol_gace5485f40a354fc160ecbe795e9930f4}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+S\+T\+A\+R\+T\+\_\+\+C\+H\+R}~\textquotesingle{}\{\textquotesingle{}\label{group___engduino_protocol_gace5485f40a354fc160ecbe795e9930f4}
+
+\item 
+\hypertarget{group___engduino_protocol_gac00577603bfbe2bce6a7d709ebcab17e}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+S\+T\+O\+P\+\_\+\+C\+H\+R}~\textquotesingle{}\}\textquotesingle{}\label{group___engduino_protocol_gac00577603bfbe2bce6a7d709ebcab17e}
+
+\item 
+\hypertarget{group___engduino_protocol_ga68fd86d7b34416ea2e90c0a66d907161}{}\#define {\bfseries P\+A\+C\+K\+A\+G\+E\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+R\+\_\+\+C\+H\+R}~\textquotesingle{};\textquotesingle{}\label{group___engduino_protocol_ga68fd86d7b34416ea2e90c0a66d907161}
+
+\item 
+\hypertarget{group___engduino_protocol_gad0b47eed6ef2df85e6b7fc96ac038ffa}{}\#define {\bfseries S\+T\+A\+T\+U\+S\+\_\+\+O\+V\+E\+R\+S\+A\+M\+P\+L\+I\+N\+G}~0\label{group___engduino_protocol_gad0b47eed6ef2df85e6b7fc96ac038ffa}
+
+\item 
+\hypertarget{group___engduino_protocol_ga312c04ce416e0afdbd653394e36a117d}{}\#define {\bfseries R\+E\+S\+\_\+\+O\+K}~0\label{group___engduino_protocol_ga312c04ce416e0afdbd653394e36a117d}
+
+\item 
+\hypertarget{group___engduino_protocol_gad9b60befde3a0fbe72125fc46611f344}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R}~-\/1\label{group___engduino_protocol_gad9b60befde3a0fbe72125fc46611f344}
+
+\item 
+\hypertarget{group___engduino_protocol_ga2cd91db027485b327c21a1b2df5413ff}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+H\+E\+A\+D\+E\+R}~-\/10\label{group___engduino_protocol_ga2cd91db027485b327c21a1b2df5413ff}
+
+\item 
+\hypertarget{group___engduino_protocol_gab35d3dd2955d68b77e95e31824cd819d}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+N\+R\+\_\+\+V\+A\+L\+S}~-\/11\label{group___engduino_protocol_gab35d3dd2955d68b77e95e31824cd819d}
+
+\item 
+\hypertarget{group___engduino_protocol_gaae5d207a5a0bca429c9cfa8d15b56069}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+V\+A\+L}~-\/12\label{group___engduino_protocol_gaae5d207a5a0bca429c9cfa8d15b56069}
+
+\item 
+\hypertarget{group___engduino_protocol_gaa1efbc1d75f47a7e18b96ed0abd99cb2}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+E\+N\+S\+O\+R\+\_\+\+T\+Y\+P\+E}~-\/13\label{group___engduino_protocol_gaa1efbc1d75f47a7e18b96ed0abd99cb2}
+
+\item 
+\hypertarget{group___engduino_protocol_ga829f526b9b829f7cc3056f815953f6dd}{}\#define {\bfseries R\+E\+S\+\_\+\+E\+R\+R\+\_\+\+P\+A\+C\+K\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+K\+E\+Y}~-\/14\label{group___engduino_protocol_ga829f526b9b829f7cc3056f815953f6dd}
+
+\item 
+\hypertarget{group___engduino_protocol_ga9ad2924bf54683250fdad58e707b4f98}{}\#define {\bfseries N\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S}~5\label{group___engduino_protocol_ga9ad2924bf54683250fdad58e707b4f98}
+
+\item 
+\hypertarget{group___engduino_protocol_ga5a63bf5566f66e30f56bc17eea0e5e4b}{}\#define {\bfseries T\+I\+M\+E\+\_\+\+S\+T\+A\+M\+P}~2.\+05\label{group___engduino_protocol_ga5a63bf5566f66e30f56bc17eea0e5e4b}
+
+\item 
+\hypertarget{group___engduino_protocol_ga2cb9809f30ffec513e731194339f2ca4}{}\#define {\bfseries M\+I\+N\+\_\+\+T\+I\+M\+E}~20\label{group___engduino_protocol_ga2cb9809f30ffec513e731194339f2ca4}
+
+\item 
+\hypertarget{group___engduino_protocol_gafa4995446d830ed56e3c1a00e3b8f6ef}{}\#define {\bfseries N\+R\+\_\+\+S\+E\+N\+S\+O\+R\+S\+\_\+\+B\+U\+F}~8\label{group___engduino_protocol_gafa4995446d830ed56e3c1a00e3b8f6ef}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_protocol_ga99fb83031ce9923c84392b4e92f956b5}{}enum \{ \\*
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+A\+L\+L} = 0, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P} = 1, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C} = 2, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+M\+A\+G} = 3, 
+\\*
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+H\+T} = 4
+ \}\label{group___engduino_protocol_ga99fb83031ce9923c84392b4e92f956b5}
+
+\item 
+\hypertarget{group___engduino_protocol_gabc6126af1d45847bc59afa0aa3216b04}{}enum \{ \\*
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P\+\_\+\+B\+U\+F} = 0, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C\+\_\+\+X\+\_\+\+B\+U\+F} = 1, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C\+\_\+\+Y\+\_\+\+B\+U\+F} = 2, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C\+\_\+\+Z\+\_\+\+B\+U\+F} = 3, 
+\\*
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+M\+A\+G\+\_\+\+X\+\_\+\+B\+U\+F} = 4, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+M\+A\+G\+\_\+\+Y\+\_\+\+B\+U\+F} = 5, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+M\+A\+G\+\_\+\+Z\+\_\+\+B\+U\+F} = 6, 
+{\bfseries S\+E\+N\+S\+O\+R\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+U\+F} = 7
+ \}\label{group___engduino_protocol_gabc6126af1d45847bc59afa0aa3216b04}
+
+\item 
+\hypertarget{group___engduino_protocol_gadc29c2ff13d900c2f185ee95427fb06c}{}enum \{ {\bfseries B\+U\+T\+T\+O\+N\+\_\+\+P\+R\+E\+S\+S\+E\+D} = 0, 
+{\bfseries B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+L\+E\+A\+S\+E\+D} = 1
+ \}\label{group___engduino_protocol_gadc29c2ff13d900c2f185ee95427fb06c}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_protocol_ga27f59876241368773edbf21774bd555e}{}void {\bfseries T\+I\+M\+E\+R1\+\_\+\+C\+O\+M\+P\+A\+\_\+vect} (void) \+\_\+\+\_\+attribute\+\_\+\+\_\+((signal))\label{group___engduino_protocol_ga27f59876241368773edbf21774bd555e}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_protocol_gaa4480082d514dbc7b702a2def3361ad2}{}\hyperlink{class_engduino_protocol_class}{Engduino\+Protocol\+Class} {\bfseries Engduino\+Protocol}\label{group___engduino_protocol_gaa4480082d514dbc7b702a2def3361ad2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Engduino Protocol driver \begin{DoxyAuthor}{Author}
+Engduino team\+: \href{mailto:support@engduino.org}{\tt support@engduino.\+org} 
+\end{DoxyAuthor}

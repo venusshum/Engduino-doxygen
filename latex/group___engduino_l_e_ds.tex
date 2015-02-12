@@ -1,0 +1,386 @@
+\hypertarget{group___engduino_l_e_ds}{}\section{Driver for Engduino L\+E\+D\+S}
+\label{group___engduino_l_e_ds}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_l_e_ds_8cpp}{Engduino\+L\+E\+Ds.\+cpp}
+\item 
+file \hyperlink{_engduino_l_e_ds_8h}{Engduino\+L\+E\+Ds.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_l_e_ds_ga2134a5a06f0865c945543a1f07eba387}{}\#define {\bfseries M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S}~0x0\+F\label{group___engduino_l_e_ds_ga2134a5a06f0865c945543a1f07eba387}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_l_e_ds_gaa68e842dd7ce4ebaf9792928e4a990f0}{}enum {\bfseries colour} \{ \\*
+{\bfseries R\+E\+D}, 
+{\bfseries G\+R\+E\+E\+N}, 
+{\bfseries B\+L\+U\+E}, 
+{\bfseries Y\+E\+L\+L\+O\+W}, 
+\\*
+{\bfseries M\+A\+G\+E\+N\+T\+A}, 
+{\bfseries C\+Y\+A\+N}, 
+{\bfseries W\+H\+I\+T\+E}, 
+{\bfseries O\+F\+F}
+ \}\label{group___engduino_l_e_ds_gaa68e842dd7ce4ebaf9792928e4a990f0}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___engduino_l_e_ds_ga6c316c07af6042f29e718c5a5b2ea656}{write\+L\+E\+Ds} (volatile uint8\+\_\+t $\ast$value)
+\begin{DoxyCompactList}\small\item\em This is an internal routine to set the L\+E\+D latches appropriately. \end{DoxyCompactList}\item 
+\hyperlink{group___engduino_l_e_ds_ga8aa6a32130ab26be17555166513a23ba}{I\+S\+R} (T\+I\+M\+E\+R4\+\_\+\+C\+O\+M\+P\+A\+\_\+vect)
+\begin{DoxyCompactList}\small\item\em I\+S\+R routine for comparator A of T\+I\+M\+E\+R 4. \end{DoxyCompactList}\item 
+\hypertarget{group___engduino_l_e_ds_gaeceaff5170a5076a831c697b154c00f2}{}void {\bfseries T\+I\+M\+E\+R4\+\_\+\+C\+O\+M\+P\+A\+\_\+vect} (void) \+\_\+\+\_\+attribute\+\_\+\+\_\+((signal))\label{group___engduino_l_e_ds_gaeceaff5170a5076a831c697b154c00f2}
+
+\item 
+\hyperlink{group___engduino_l_e_ds_ga37cd3409485caa6cd8712e9d70c95171}{Engduino\+L\+E\+Ds\+Class\+::\+Engduino\+L\+E\+Ds\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga288fdb1044c2685bd16f2ab7ea793e9f}{Engduino\+L\+E\+Ds\+Class\+::begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga07e877de81c2a7016ab65564f2e0b2df}{Engduino\+L\+E\+Ds\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the L\+E\+Ds \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga02934e20c403fc14d563fbf09d3a3b68}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D} (uint8\+\_\+t L\+E\+D\+Number, colour c)
+\begin{DoxyCompactList}\small\item\em Set the colour of a single L\+E\+D at maximum brightness. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_gab354e5a76be82762e0a5c0f96abd75a6}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D} (uint8\+\_\+t L\+E\+D\+Number, colour c, uint8\+\_\+t brightness)
+\begin{DoxyCompactList}\small\item\em Set an L\+E\+D to a given colour/brightness. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga1c7421a4eed2e09aeda98da4a4b29483}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D} (uint8\+\_\+t L\+E\+D\+Number, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Set an L\+E\+D to a given point in the rgb space. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga50aaa6fe93206e0fa0f037b4a7be3284}{Engduino\+L\+E\+Ds\+Class\+::set\+All} (colour c)
+\begin{DoxyCompactList}\small\item\em Set the colour of all L\+E\+Ds at maximum brightness. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga0047bf22f224f1d2bfff77d04b89e89f}{Engduino\+L\+E\+Ds\+Class\+::set\+All} (colour c, uint8\+\_\+t brightness)
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given colour/brightness. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_gaddff7887dd930a0b8865c92892c0f899}{Engduino\+L\+E\+Ds\+Class\+::set\+All} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given point in the rgb space. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga640f4a7798f27d483f5727baaab12c2e}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds} (colour c\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set the colour of all L\+E\+Ds at maximum brightness from an array of individual values. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga92a706323b3e89453ee6f6b7f2057a59}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds} (colour colour\mbox{[}16\mbox{]}, uint8\+\_\+t brightness\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given colour/brightness from arrays of individual values. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga48ac99a4c0feb705368a0eecb6eb6c6d}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds} (uint8\+\_\+t r\mbox{[}16\mbox{]}, uint8\+\_\+t g\mbox{[}16\mbox{]}, uint8\+\_\+t b\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given point in the rgb space from arrays of individual values. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga0a9653a83047056363d0fca5628ed0c9}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds} (uint8\+\_\+t rgb\mbox{[}3\mbox{]}\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given point in the rgb space a 2\+D array of individual values. The array is of form rgb\mbox{[}3\mbox{]}\mbox{[}16\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_l_e_ds_ga41d42e2b694c6a1de7e0e53d9b85c2bb}{Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds} (uint8\+\_\+t rgb\mbox{[}16\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Set all L\+E\+Ds to a given point in the rgb space a 2\+D array of individual values. The array is of form rgb\mbox{[}16\mbox{]}\mbox{[}3\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_l_e_ds_ga3d4bf6230e99543620a37c5f311a7121}{}\hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class} {\bfseries Engduino\+L\+E\+Ds} = \hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class}()\label{group___engduino_l_e_ds_ga3d4bf6230e99543620a37c5f311a7121}
+
+\item 
+\hypertarget{group___engduino_l_e_ds_ga3d4bf6230e99543620a37c5f311a7121}{}\hyperlink{class_engduino_l_e_ds_class}{Engduino\+L\+E\+Ds\+Class} {\bfseries Engduino\+L\+E\+Ds}\label{group___engduino_l_e_ds_ga3d4bf6230e99543620a37c5f311a7121}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the driver code for L\+E\+Ds on the Engduino These L\+E\+D\+S are not directly connected to pins on the At\+Mega32u4 processor. Instead they are connected through L\+E\+D drivers so should only be accessed through this code.
+
+The Engduino has 16 R\+G\+B L\+E\+Ds on it, each of which can be controlled independently. To make the granularity of control greater, we implement a software P\+W\+M for each L\+E\+D. This allows for 16 levels of brightness in each of the R\+G\+B channels on each L\+E\+D with minimal flicker.
+
+This implementation uses T\+I\+M\+E\+R4 Comparator A to implement the P\+W\+M. The timer is set to run at $\sim$320\+Hz. The clock is reset on interrupt, so you should be very wary about using the other comparators. 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_l_e_ds_ga288fdb1044c2685bd16f2ab7ea793e9f}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga288fdb1044c2685bd16f2ab7ea793e9f}
+
+
+begin function -\/ must be called before using other functions 
+
+The connection to the L\+E\+Ds is not direct. Instead, it happens through three L\+E\+D drivers -\/ one each for the R, G, and B channels. These are connected through a daisy-\/chained S\+P\+I connection. There is a single latch line connected to all driver chips, which latches the value set by S\+P\+I when the line is pulsed high. The output from each driver chip can be switched on or off with a separate output enable line to each driver -\/ when these are L\+O\+W the driver output lines go to the L\+E\+Ds; when H\+I\+G\+H, they do not. \hypertarget{group___engduino_l_e_ds_ga07e877de81c2a7016ab65564f2e0b2df}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!end@{end}}
+\index{end@{end}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga07e877de81c2a7016ab65564f2e0b2df}
+
+
+end function -\/ switch off the L\+E\+Ds 
+
+We drive the output enables for all three drivers high. This disconnects the driver from the L\+E\+Ds and so all subsequent changes will have no effect. We also stop the timer interrupt. \hypertarget{group___engduino_l_e_ds_ga37cd3409485caa6cd8712e9d70c95171}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!Engduino\+L\+E\+Ds\+Class@{Engduino\+L\+E\+Ds\+Class}}
+\index{Engduino\+L\+E\+Ds\+Class@{Engduino\+L\+E\+Ds\+Class}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{Engduino\+L\+E\+Ds\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+L\+E\+Ds\+Class\+::\+Engduino\+L\+E\+Ds\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga37cd3409485caa6cd8712e9d70c95171}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_l_e_ds_ga8aa6a32130ab26be17555166513a23ba}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!I\+S\+R@{I\+S\+R}}
+\index{I\+S\+R@{I\+S\+R}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}I\+S\+R (
+\begin{DoxyParamCaption}
+\item[{T\+I\+M\+E\+R4\+\_\+\+C\+O\+M\+P\+A\+\_\+vect}]{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga8aa6a32130ab26be17555166513a23ba}
+
+
+I\+S\+R routine for comparator A of T\+I\+M\+E\+R 4. 
+
+T\+I\+M\+E\+R4 interrupt code ticks at $\sim$320\+Hz, which means we can do 16 brightness levels at 20\+Hz, so flickering is invisible to the naked eye. This I\+S\+R implements the software P\+W\+M and calls the L\+E\+D display function.
+
+Because we must update the L\+E\+Ds very frequently, and because it still takes a significant period to write all 3$\ast$16 values to the L\+E\+D drivers, we need this code to run as fast as possible. We also need to ensure that we do not prevent other interrupts from occurring whilst we process this. To that end we stop interrupts for this I\+S\+R to prevent any nesting, reset the counter and re-\/enable interrupts generally before calling setting the L\+E\+D values.
+
+The P\+W\+M implementation relies on counting in units of the brightness on a channel and setting the apropriate colour channel on for an L\+E\+D when the accumulated value overflows. This is slightly faster if the rgb values are in the range 0-\/255 than 0-\/15, because we can do it with a simple comparison.
+
+This function then calls write\+L\+E\+Ds for each of the R\+G\+B values, in reverse order. The drivers are daisy chained and we need to shift the blue values to the far end of that chain before pulsing the latch. This written using low level C programming primitives of changing the voltages on A\+T\+Mega32\+U4 pins rather than the Arduino digital\+Write equivalents. This has to be done in this way for speed -\/ it is around 18 times faster than the alternative and, because we update the values rather frequently to avoid flickering, speed is important.
+
+Notes\+: The P\+W\+M implementation will occasionally put one more dark period in than it should, but we can live with this for simplicity. P\+B7 is pin 12 on the A\+T\+Mega32\+U4 and is attached to the L\+E\+D L\+A\+T\+C\+H \hypertarget{group___engduino_l_e_ds_ga50aaa6fe93206e0fa0f037b4a7be3284}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+All@{set\+All}}
+\index{set\+All@{set\+All}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+All (
+\begin{DoxyParamCaption}
+\item[{colour}]{c}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga50aaa6fe93206e0fa0f037b4a7be3284}
+
+
+Set the colour of all L\+E\+Ds at maximum brightness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Colour, as chosen from the colour enum\\
+\hline
+\end{DoxyParams}
+Set the colour of all L\+E\+Ds. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. \hypertarget{group___engduino_l_e_ds_ga0047bf22f224f1d2bfff77d04b89e89f}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+All@{set\+All}}
+\index{set\+All@{set\+All}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+All (
+\begin{DoxyParamCaption}
+\item[{colour}]{c, }
+\item[{uint8\+\_\+t}]{brightness}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga0047bf22f224f1d2bfff77d04b89e89f}
+
+
+Set all L\+E\+Ds to a given colour/brightness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Colour, as chosen from the colour enum \\
+\hline
+{\em brightness} & A 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S(=15) value\\
+\hline
+\end{DoxyParams}
+Set the colour of all L\+E\+Ds. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. Brightness ranges from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15). Choosing a brightness of zero will turn all L\+E\+Ds off. \hypertarget{group___engduino_l_e_ds_gaddff7887dd930a0b8865c92892c0f899}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+All@{set\+All}}
+\index{set\+All@{set\+All}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+All}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+All (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_gaddff7887dd930a0b8865c92892c0f899}
+
+
+Set all L\+E\+Ds to a given point in the rgb space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Brightness of the red channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em g} & Brightness of the green channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em b} & Brightness of the blue channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of all L\+E\+Ds to a point in rgb space. The brightness in each channel may range from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15).
+
+Note\+: in the Engduino 1.\+0, we cannot use the full brightness for the L\+E\+Ds when the colour white, or colours close to white are requested, simply because this causes too big a drain on current whilst the device is attached to the U\+S\+B. This causes a system reset, which is both irritating and makes reprogramming rather tedious. So we limit the sum of the rgb values to a number we chose empirically, and we reduce the chosen rgb values until they sum to less than that chosen. \hypertarget{group___engduino_l_e_ds_ga02934e20c403fc14d563fbf09d3a3b68}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+D@{set\+L\+E\+D}}
+\index{set\+L\+E\+D@{set\+L\+E\+D}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{L\+E\+D\+Number, }
+\item[{colour}]{c}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga02934e20c403fc14d563fbf09d3a3b68}
+
+
+Set the colour of a single L\+E\+D at maximum brightness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & L\+E\+D number, ranging from 0 (for L\+E\+D0) to 15 (L\+E\+D15) \\
+\hline
+{\em c} & Colour, as chosen from the colour enum\\
+\hline
+\end{DoxyParams}
+Set the colour of an L\+E\+D. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. \hypertarget{group___engduino_l_e_ds_gab354e5a76be82762e0a5c0f96abd75a6}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+D@{set\+L\+E\+D}}
+\index{set\+L\+E\+D@{set\+L\+E\+D}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{L\+E\+D\+Number, }
+\item[{colour}]{c, }
+\item[{uint8\+\_\+t}]{brightness}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_gab354e5a76be82762e0a5c0f96abd75a6}
+
+
+Set an L\+E\+D to a given colour/brightness. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & L\+E\+D number, ranging from 0 (for L\+E\+D0) to 15 (L\+E\+D15) \\
+\hline
+{\em c} & Colour, as chosen from the colour enum \\
+\hline
+{\em brightness} & A 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S(=15) value\\
+\hline
+\end{DoxyParams}
+Set the colour of an L\+E\+D. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. Brightness ranges from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15). Choosing a brightness of zero will turn an L\+E\+D off. \hypertarget{group___engduino_l_e_ds_ga1c7421a4eed2e09aeda98da4a4b29483}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+D@{set\+L\+E\+D}}
+\index{set\+L\+E\+D@{set\+L\+E\+D}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+D (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{L\+E\+D\+Number, }
+\item[{uint8\+\_\+t}]{r, }
+\item[{uint8\+\_\+t}]{g, }
+\item[{uint8\+\_\+t}]{b}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga1c7421a4eed2e09aeda98da4a4b29483}
+
+
+Set an L\+E\+D to a given point in the rgb space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em L\+E\+D\+Number} & L\+E\+D number, ranging from 0 (for L\+E\+D0) to 15 (L\+E\+D15) \\
+\hline
+{\em r} & Brightness of the red channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em g} & Brightness of the green channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em b} & Brightness of the blue channel from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of an L\+E\+D to a point in rgb space. The brightness in each channel may range from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15).
+
+Note\+: in the Engduino 1.\+0, we cannot use the full brightness for the L\+E\+Ds when the colour white, or colours close to white are requested, simply because this causes too big a drain on current whilst the device is attached to the U\+S\+B. This causes a system reset, which is both irritating and makes reprogramming rather tedious. So we limit the sum of the rgb values to a number we chose empirically, and we reduce the chosen rgb values until they sum to less than that chosen. \hypertarget{group___engduino_l_e_ds_ga640f4a7798f27d483f5727baaab12c2e}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{colour}]{c\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga640f4a7798f27d483f5727baaab12c2e}
+
+
+Set the colour of all L\+E\+Ds at maximum brightness from an array of individual values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Array of colour values, as chosen from the colour enum\\
+\hline
+\end{DoxyParams}
+Set the colour of all L\+E\+Ds from an array of colour values -\/ i.\+e. each L\+E\+D can be set to a different colour, though all are at maximum brightness. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. \hypertarget{group___engduino_l_e_ds_ga92a706323b3e89453ee6f6b7f2057a59}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{colour}]{c\mbox{[}16\mbox{]}, }
+\item[{uint8\+\_\+t}]{brightness\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga92a706323b3e89453ee6f6b7f2057a59}
+
+
+Set all L\+E\+Ds to a given colour/brightness from arrays of individual values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Array of colour values, as chosen from the colour enum \\
+\hline
+{\em brightness} & Array of brightness values, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S(=15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of all L\+E\+Ds from two arrays of values -\/ i.\+e. each L\+E\+D can be set to a different colour/brightness value. The colour value here is chosen from an enum and corresponds to the primary and secondary colours of light, plus white and off. Brightness ranges from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15). Choosing a brightness of zero will turn an L\+E\+D off. \hypertarget{group___engduino_l_e_ds_ga48ac99a4c0feb705368a0eecb6eb6c6d}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{r\mbox{[}16\mbox{]}, }
+\item[{uint8\+\_\+t}]{g\mbox{[}16\mbox{]}, }
+\item[{uint8\+\_\+t}]{b\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga48ac99a4c0feb705368a0eecb6eb6c6d}
+
+
+Set all L\+E\+Ds to a given point in the rgb space from arrays of individual values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Array of red channel brightness, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em g} & Array of green channel brightness, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15) \\
+\hline
+{\em b} & Array of blue channel brightness, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of all L\+E\+Ds to a point in rgb space from three arrays of values -\/ i.\+e. each L\+E\+D can be set to a different rgb point. The brightness in each channel may range from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15).
+
+Note\+: in the Engduino 1.\+0, we cannot use the full brightness for the L\+E\+Ds when the colour white, or colours close to white are requested, simply because this causes too big a drain on current whilst the device is attached to the U\+S\+B. This causes a system reset, which is both irritating and makes reprogramming rather tedious. So we limit the sum of the rgb values to a number we chose empirically, and we reduce the chosen rgb values until they sum to less than that chosen. \hypertarget{group___engduino_l_e_ds_ga0a9653a83047056363d0fca5628ed0c9}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{rgb\mbox{[}3\mbox{]}\mbox{[}16\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga0a9653a83047056363d0fca5628ed0c9}
+
+
+Set all L\+E\+Ds to a given point in the rgb space a 2\+D array of individual values. The array is of form rgb\mbox{[}3\mbox{]}\mbox{[}16\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & 2\+D array of rgb brightnesses, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of all L\+E\+Ds to a point in rgb space from a 2\+D array values -\/ i.\+e. each L\+E\+D can be set to a different rgb point. The array is of form rgb\mbox{[}3\mbox{]}\mbox{[}16\mbox{]} -\/ i.\+e. the first index is the red/green/blue channel and the second is the L\+E\+D (ranging from 0-\/15). The brightness in each channel may range from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15).
+
+Note\+: in the Engduino 1.\+0, we cannot use the full brightness for the L\+E\+Ds when the colour white, or colours close to white are requested, simply because this causes too big a drain on current whilst the device is attached to the U\+S\+B. This causes a system reset, which is both irritating and makes reprogramming rather tedious. So we limit the sum of the rgb values to a number we chose empirically, and we reduce the chosen rgb values until they sum to less than that chosen. \hypertarget{group___engduino_l_e_ds_ga41d42e2b694c6a1de7e0e53d9b85c2bb}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+\index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+L\+E\+Ds\+Class\+::set\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{rgb\mbox{[}16\mbox{]}\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{group___engduino_l_e_ds_ga41d42e2b694c6a1de7e0e53d9b85c2bb}
+
+
+Set all L\+E\+Ds to a given point in the rgb space a 2\+D array of individual values. The array is of form rgb\mbox{[}16\mbox{]}\mbox{[}3\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rgb} & 2\+D array of rgb brightnesses, from 0-\/\+M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (15)\\
+\hline
+\end{DoxyParams}
+Set the colour/brightness of all L\+E\+Ds to a point in rgb space from a 2\+D array values -\/ i.\+e. each L\+E\+D can be set to a different rgb point. The array is of form rgb\mbox{[}16\mbox{]}\mbox{[}3\mbox{]} -\/ i.\+e. the first index is the L\+E\+D (ranging from 0-\/15). and the second is the red/green/blue channel. The brightness in each channel may range from 0 to M\+A\+X\+\_\+\+B\+R\+I\+G\+H\+T\+N\+E\+S\+S (currently 15).
+
+Note\+: in the Engduino 1.\+0, we cannot use the full brightness for the L\+E\+Ds when the colour white, or colours close to white are requested, simply because this causes too big a drain on current whilst the device is attached to the U\+S\+B. This causes a system reset, which is both irritating and makes reprogramming rather tedious. So we limit the sum of the rgb values to a number we chose empirically, and we reduce the chosen rgb values until they sum to less than that chosen. \hypertarget{group___engduino_l_e_ds_ga6c316c07af6042f29e718c5a5b2ea656}{}\index{Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}!write\+L\+E\+Ds@{write\+L\+E\+Ds}}
+\index{write\+L\+E\+Ds@{write\+L\+E\+Ds}!Driver for Engduino L\+E\+D\+S@{Driver for Engduino L\+E\+D\+S}}
+\subsubsection[{write\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}void write\+L\+E\+Ds (
+\begin{DoxyParamCaption}
+\item[{volatile uint8\+\_\+t $\ast$}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{group___engduino_l_e_ds_ga6c316c07af6042f29e718c5a5b2ea656}
+
+
+This is an internal routine to set the L\+E\+D latches appropriately. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The on/off bits for each L\+E\+D on a given channel\\
+\hline
+\end{DoxyParams}
+This function sends two S\+P\+I 8bit packages to simulate 16bit S\+P\+I package.
+
+Notes\+: P\+B1 is pin 9 -\/ S\+P\+I S\+C\+L\+K P\+B2 is pin 10 -\/ S\+P\+I M\+O\+S\+I P\+B3 is pin 11 -\/ S\+P\+I M\+I\+S\+O 

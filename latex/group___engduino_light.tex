@@ -1,0 +1,85 @@
+\hypertarget{group___engduino_light}{}\section{Driver for Engduino Light Sensor}
+\label{group___engduino_light}\index{Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}}
+\subsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{_engduino_light_8cpp}{Engduino\+Light.\+cpp}
+\item 
+file \hyperlink{_engduino_light_8h}{Engduino\+Light.\+h}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_engduino_light_class}{Engduino\+Light\+Class}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___engduino_light_ga865276a25a2d2934c9a12f91e61d2e39}{Engduino\+Light\+Class\+::\+Engduino\+Light\+Class} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_light_gacbe1d008594ff191bf3e3605f02b3b45}{Engduino\+Light\+Class\+::begin} ()
+\begin{DoxyCompactList}\small\item\em begin function -\/ must be called before using other functions \end{DoxyCompactList}\item 
+void \hyperlink{group___engduino_light_ga967df93f0dbc15fe2dc352f4cf4baa13}{Engduino\+Light\+Class\+::end} ()
+\begin{DoxyCompactList}\small\item\em end function -\/ switch off the light sensor \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___engduino_light_ga4ce4ac979e9b8987679edd085ea09ea9}{Engduino\+Light\+Class\+::light\+Level} ()
+\begin{DoxyCompactList}\small\item\em light\+Level function -\/ returns light level (10 bit value) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___engduino_light_gaa4ef64a9d70c3f7184f463e7d3854c84}{}\hyperlink{class_engduino_light_class}{Engduino\+Light\+Class} {\bfseries Engduino\+Light} = \hyperlink{class_engduino_light_class}{Engduino\+Light\+Class}()\label{group___engduino_light_gaa4ef64a9d70c3f7184f463e7d3854c84}
+
+\item 
+\hypertarget{group___engduino_light_gaa4ef64a9d70c3f7184f463e7d3854c84}{}\hyperlink{class_engduino_light_class}{Engduino\+Light\+Class} {\bfseries Engduino\+Light}\label{group___engduino_light_gaa4ef64a9d70c3f7184f463e7d3854c84}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the driver code for Light on the Engduino In v3.\+0 this light sensor is a Avago A\+D\+P\+S-\/9008. 
+
+\subsection{Function Documentation}
+\hypertarget{group___engduino_light_gacbe1d008594ff191bf3e3605f02b3b45}{}\index{Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}!begin@{begin}}
+\index{begin@{begin}!Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Light\+Class\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_light_gacbe1d008594ff191bf3e3605f02b3b45}
+
+
+begin function -\/ must be called before using other functions 
+
+Does nothing in this case \hypertarget{group___engduino_light_ga967df93f0dbc15fe2dc352f4cf4baa13}{}\index{Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}!end@{end}}
+\index{end@{end}!Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Light\+Class\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_light_ga967df93f0dbc15fe2dc352f4cf4baa13}
+
+
+end function -\/ switch off the light sensor 
+
+Does nothing in this case \hypertarget{group___engduino_light_ga865276a25a2d2934c9a12f91e61d2e39}{}\index{Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}!Engduino\+Light\+Class@{Engduino\+Light\+Class}}
+\index{Engduino\+Light\+Class@{Engduino\+Light\+Class}!Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}}
+\subsubsection[{Engduino\+Light\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Light\+Class\+::\+Engduino\+Light\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_light_ga865276a25a2d2934c9a12f91e61d2e39}
+
+
+Constructor. 
+
+C++ constructor for this class. Empty. \hypertarget{group___engduino_light_ga4ce4ac979e9b8987679edd085ea09ea9}{}\index{Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}!light\+Level@{light\+Level}}
+\index{light\+Level@{light\+Level}!Driver for Engduino Light Sensor@{Driver for Engduino Light Sensor}}
+\subsubsection[{light\+Level}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Engduino\+Light\+Class\+::light\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{group___engduino_light_ga4ce4ac979e9b8987679edd085ea09ea9}
+
+
+light\+Level function -\/ returns light level (10 bit value) 
+
+This function returns the light level. Since the input is an analogue one and the A\+D\+C gives a 10 bit value, it returns a 16 bit integer. 
