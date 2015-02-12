@@ -350,13 +350,20 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>This is the driver code for the Engduino protocol.</p>
-<p>The Engduino protocol enables communication between Engduino board and external devices such as personal computer or smart phone/tablet over the small set of instructions/commands. Commands are represented by easy to understand ASCII strings with predefined definitions of different parameters. Commands can be send over the terminal which supports UART communication e.g. Putty, HyperTerminal, Matlab, etc or over the Bluetooth communication. Bluetooth communication can be established between Engduino Bluetooth extension board and a Smart device (mobile phone, tablet, etc) or personal computer with Bluetooth port. In the case of Bluetooth communication Bluetooth extension board for Engduino need to be used.</p>
-<p>The main sketch implementing this protocol: ..\100.Engduino.ino</p>
-<p>Engduino package: Start chr, delimiter, end chr { ; }</p>
-<p>Simplest Engduino package: {PACKAGE_TYPE; COMMAND_ID; VAL1, ..., VALn}</p>
-<p>Examples: {1;10;1} or with defines {PACKAGE_TYPE_1; COM_SET_LEDS; GREEN} -&gt; Turns on all RGB LEDs with green colour.</p>
+<p>The Engduino protocol enables communication between the Engduino board and external devices, such as a personal computer or smart phone/tablet, over the small set of instructions/commands. Commands are represented by easy to understand ASCII strings with predefined definitions of different parameters. Commands can be sent over the terminal which supports UART communication e.g. Putty, HyperTerminal, Matlab, etc., or via Bluetooth. Bluetooth communication can be established between the Engduino Bluetooth extension board and a smart device (mobile phone, tablet, etc.) or a personal computer with Bluetooth port. In the case of Bluetooth communication, the Bluetooth extension board for Engduino must be used.</p>
+<p>The main sketch implementing this protocol is: "..\examples\100.Engduino\Protocol\Protocol.ino"</p>
+<p>Engduino package: </p><table class="doxtable">
+<tr>
+<th>Start chr</th><th>Delimiter</th><th>End chr </th></tr>
+<tr>
+<td>{</td><td>;</td><td>}</td></tr>
+</table>
+<p>Simplest Engduino package:<br />
+{PACKAGE_TYPE; COMMAND_ID; VAL1, ..., VALn}</p>
+<p>Examples:<br />
+{1;10;1} or with defines {PACKAGE_TYPE_1; COM_SET_LEDS; GREEN} -&gt; Turns on all RGB LEDs with green colour.</p>
 <p>{1;100} or with defines {PACKAGE_TYPE_1; COM_GET_VERSION} -&gt; Returns package as {1;100;VERSION}</p>
-<p>{1;111;100} or with defines {PACKAGE_TYPE_1; COM_GET_TEMPERATURE; 100} -&gt; Enables continuous mode on Temperature sensor. Package with measurement of temperature will be sends back on every 100 milliseconds. Sample: {1;111;27546} represents 27.546°C. </p>
+<p>{1;111;100} or with defines {PACKAGE_TYPE_1; COM_GET_TEMPERATURE; 100} -&gt; Enables continuous mode on Temperature sensor. Package with measurement of temperature will be sent back on every 100 milliseconds. Sample: {1;111;27546} represents 27.546 degrees Celsius. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga34fa624085b8267e2793094c67e083e2"></a>
 <div class="memitem">
@@ -425,7 +432,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>This function initialize Engduino protocol functionalities. It needs to be called with all input parameters representing Engduino objects. Objects itself needs to be initialized in user code with required users definitions. </p>
+<p>This function initializes Engduino protocol functionalities. It must be called with all input parameters representing Engduino objects. Objects themselves must to be initialized in user code with required users definitions. </p>
 
 </div>
 </div>
@@ -505,8 +512,21 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will sends button state or enables button interrupt, which will immediately sends back any change in button state. Both edges can be configured as an interrupt source.</p>
-<p>Input value examples: [0 ] -&gt; Read once [-1] -&gt; Disable button interrupt [1 ] -&gt; Sends package on button press [2 ] -&gt; Sends package on button release [3 ] -&gt; Sends package on change of both button states </p>
+<p>This function will send button state or enables button interrupt, which will immediately sens back any change in button state. Both edges can be configured as an interrupt source.</p>
+<p>Input value examples: </p><table class="doxtable">
+<tr>
+<th>Input val.</th><th>Action </th></tr>
+<tr>
+<td>[0]</td><td>Read once </td></tr>
+<tr>
+<td>[-1]</td><td>Disable button interrupt </td></tr>
+<tr>
+<td>[1]</td><td>Send package on button press </td></tr>
+<tr>
+<td>[2]</td><td>Send package on button release </td></tr>
+<tr>
+<td>[3]</td><td>Send package on change of both button states</td></tr>
+</table>
 
 </div>
 </div>
@@ -557,8 +577,17 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will sends back measurements from chosen on-board sensor or multiple sensors at once. It also supports continuous sampling with specified sampling interval. Active sensor is defined by "sensorType" variable e.g.: SENSOR_TEMP, SENSOR_ACC, SENSOR_ALL, ...</p>
-<p>Input value examples: [0 ] -&gt; Read once [-1] -&gt; Stop continuous sampling if it is active [&gt;0] -&gt; Start continuous sampling with time interval in [ms] </p>
+<p>This function will send back measurements from chosen on-board sensor or multiple sensors at once. It also supports continuous sampling with a specified sampling interval. Active sensor is defined by "sensorType" variable e.g.: SENSOR_TEMP, SENSOR_ACC, SENSOR_ALL, ...</p>
+<p>Input value examples: </p><table class="doxtable">
+<tr>
+<th>Input val.</th><th>Action </th></tr>
+<tr>
+<td>[0]</td><td>Read once </td></tr>
+<tr>
+<td>[-1]</td><td>Stop continuous sampling if it is active </td></tr>
+<tr>
+<td>[&gt;0]</td><td>Start continuous sampling with time interval in [ms]</td></tr>
+</table>
 
 </div>
 </div>
@@ -583,8 +612,8 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will sends back version of the Engduino board and running sketch on it. </p>
+<dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents a particular error.</dd></dl>
+<p>This function will send back the version of the Engduino board and running sketch on it. </p>
 
 </div>
 </div>
@@ -603,7 +632,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Timer 1 interrupt service routine. </p>
-<p>This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise function will return immediately. </p>
+<p>This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise the function will return immediately. </p>
 
 </div>
 </div>
@@ -639,7 +668,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The main loop of Engduino protocol operating system. </p>
-<p>This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise function will return immediately. </p>
+<p>This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise the function will return immediately. </p>
 
 </div>
 </div>
@@ -677,13 +706,13 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">str</td><td>Input string representing Engduino package </td></tr>
-    <tr><td class="paramname">outNrVals</td><td>Pointer to an output variable which holds the value of splited strings into values type long </td></tr>
+    <tr><td class="paramname">outNrVals</td><td>Pointer to an output variable which holds the value of split strings into values type long </td></tr>
     <tr><td class="paramname">outVals</td><td>Pointer to an output array with values type long </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Unconditional RES_OK</dd></dl>
-<p>This function will split Engduino package into array of values type long. String will be splitted by delimiter and then converted into long numbers. The number of splitted numbers will be also returned.</p>
+<p>This function will split Engduino package into an array of values type long. String will be split by delimiter and then converted into long numbers. The number of split numbers will be also returned.</p>
 <p>Example of Engduino package: {1;10;123} as an input parameter "str". </p>
 
 </div>
@@ -742,7 +771,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function parse input array of values into the Engduino package structure. The first value in array always represents the package type. Other values in header depend on the package type. The simplest package type is PACKAGE_TYPE_1, which includes only a command ID. Other package types are more advanced including additional header informations like address, timestamp, acknowledge request, etc. </p>
+<p>This function parses input array of values into the Engduino package structure. The first value in array always represents the package type. Other values in header depend on the package type. The simplest package type is PACKAGE_TYPE_1, which includes only a command ID. Other package types are more advanced and include additional header information like address, time stamp, acknowledge request, etc. </p>
 
 </div>
 </div>
@@ -838,7 +867,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function converts array of input variables into a string and sends package over the active communication channel (Serial or BT). Header fields will be added accordingly to the package type. Package Format: {a,b,c,...x,y,z} </p>
+<p>This function converts the array of input variables into a string and sends package over the active communication channel (Serial or BT). Header fields will be added accordingly to the package type. Package Format: {a,b,c,...x,y,z} </p>
 
 </div>
 </div>
@@ -889,9 +918,13 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will sends data over the IR communication or wait on data to be received. Timeout is specified by input parameter. After the timeout expiries received data will be send back over the active communication channel.</p>
-<p>Input value examples: SET (setGet = 0) [69,110,103,100,117,105,110,111] -&gt; "Engduino" Array "inVals" represents letters (ASCII values; <a href="http://www.asciitable.com/">http://www.asciitable.com/</a>) separated by delimiter.</p>
-<p>Input value examples: GET (setGet = 1) [1000] -&gt; Timeout is set on 1000us (1ms); Max timeout is 65535us </p>
+<p>This function will send data over the IR communication or wait on data to be received. Timeout is specified by input parameter. After the timeout expiries, received data will be sent back over the active communication channel.</p>
+<p>Input value examples: SET (setGet = 0) <br />
+ [69,110,103,100,117,105,110,111] -&gt; "Engduino" <br />
+ Array "inVals" represents letters (ASCII values; <a href="http://www.asciitable.com/">http://www.asciitable.com/</a>) separated by delimiter.</p>
+<p><br />
+ Input value examples: GET (setGet = 1) <br />
+ [1000] -&gt; Timeout is set on 1000us (1ms); Max timeout is 65535us </p>
 
 </div>
 </div>
@@ -942,9 +975,11 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will sets or gets Engduino configuration. Parameters needs to be specified in KEY-VALUE pairs. Multiple pairs can be included in the same package.</p>
-<p>Input value examples: SET (setGet = 0) [0,12, 1,23, 6,0, ...] -&gt; Set status variable 0 to a value 12, Set status variable 1 to a value 23, Set status variable 6 to a value 0.</p>
-<p>Input value examples: GET (setGet = 1) [0, 1, 6] -&gt; Will return KEY-VALUE pairs for status variables 0, 1 and 6. E.g.: [0,12, 1,23, 6,0] </p>
+<p>This function will set or get Engduino configuration. Parameters needs to be specified in KEY-VALUE pairs. Multiple pairs can be included in the same package.</p>
+<p>Input value examples: SET (setGet = 0) <br />
+ [0,12, 1,23, 6,0, ...] -&gt; Set status variable 0 to a value 12, Set status variable 1 to a value 23, Set status variable 6 to a value 0.</p>
+<p>Input value examples: GET (setGet = 1) <br />
+ [0, 1, 6] -&gt; Will return KEY-VALUE pairs for status variables 0, 1 and 6. E.g.: [0,12, 1,23, 6,0] </p>
 
 </div>
 </div>
@@ -989,7 +1024,14 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
 <p>This function parses input value and turn on of off small green LED.</p>
-<p>Input value examples: [0 ] -&gt; Turn off LED [&gt;= 1] -&gt; Turn on LED </p>
+<p>Input value examples: </p><table class="doxtable">
+<tr>
+<th>Input val.</th><th>Action </th></tr>
+<tr>
+<td>[0]</td><td>Turn off LED </td></tr>
+<tr>
+<td>[&gt;= 1]</td><td>Turn on LED</td></tr>
+</table>
 
 </div>
 </div>
@@ -1033,8 +1075,25 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function parses input values into the RGB colours and brightness. Function supports many different options how to manipulate with LEDs. From turning on a single LED to a full RGB specter on each LED.</p>
-<p>Input value examples: NrOfParameters Value Action 1 - [colour] [0-7] Set colour of all LEDs. 2 - [ledID, colour] [0-15, 0-7] Set colour of one LED. 3 - [cR, cG, cB] [0-15, 0-15, 0-15] Set RGB colour of all LEDs. 4 - [ledID, cR, cG, cB] [0-7, 0-15, 0-15, 0-15] Set RGB colour of one LED. 16 - [c0, c1, ... , c15] [0-15, 0-15, ..., 0-15] Set colours specific colours of all LEDs. 32 - [c0, ..., c15, b0, ..., b15] [0-7, ..., 0-7, 0-15, ..., 0-15] Set specific colours and brightness of all LEDs. 48 - [r0, g0, b0, ... , r15, g15, b15] [0-15, ..., 0-15] Set specific RGB colours of all LEDs. </p>
+<p>This function parses input values into the RGB colours and brightness. The function supports many different options on how to manipulate with LEDs. From turning on a single LED to a full RGB specter on each LED.</p>
+<p>Input value examples: </p><table class="doxtable">
+<tr>
+<th>NrOfParameters</th><th>Value</th><th>Action </th></tr>
+<tr>
+<td>1 - [colour]</td><td>[0-7]</td><td>Set colour of all LEDs </td></tr>
+<tr>
+<td>2 - [ledID, colour]</td><td>[0-15, 0-7]</td><td>Set colour of one LED </td></tr>
+<tr>
+<td>3 - [cR, cG, cB]</td><td>[0-15, 0-15, 0-15]</td><td>Set RGB colour of all LEDs </td></tr>
+<tr>
+<td>4 - [ledID, cR, cG, cB]</td><td>[0-7, 0-15, 0-15, 0-15]</td><td>Set RGB colour of one LED </td></tr>
+<tr>
+<td>16 - [c0, c1, ... , c15]</td><td>[0-15, 0-15, ..., 0-15]</td><td>Set colours specific colours of all LEDs </td></tr>
+<tr>
+<td>32 - [c0, ..., c15, b0, ..., b15]</td><td>[0-7, ..., 0-7, 0-15, ..., 0-15]</td><td>Set specific colours and brightness of all LEDs </td></tr>
+<tr>
+<td>48 - [r0, g0, b0, ... , r15, g15, b15]</td><td>[0-15, ..., 0-15]</td><td>Set specific RGB colours of all LEDs </td></tr>
+</table>
 
 </div>
 </div>
@@ -1059,7 +1118,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 11 2015 23:31:16 for Engduino by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 12 2015 00:14:55 for Engduino by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>

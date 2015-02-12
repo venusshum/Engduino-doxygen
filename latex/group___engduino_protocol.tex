@@ -245,19 +245,26 @@ void \hyperlink{group___engduino_protocol_ga69274ee75df14c92966878a83248f89e}{En
 \subsection{Detailed Description}
 This is the driver code for the Engduino protocol.
 
-The Engduino protocol enables communication between Engduino board and external devices such as personal computer or smart phone/tablet over the small set of instructions/commands. Commands are represented by easy to understand A\+S\+C\+I\+I strings with predefined definitions of different parameters. Commands can be send over the terminal which supports U\+A\+R\+T communication e.\+g. Putty, Hyper\+Terminal, Matlab, etc or over the Bluetooth communication. Bluetooth communication can be established between Engduino Bluetooth extension board and a Smart device (mobile phone, tablet, etc) or personal computer with Bluetooth port. In the case of Bluetooth communication Bluetooth extension board for Engduino need to be used.
+The Engduino protocol enables communication between the Engduino board and external devices, such as a personal computer or smart phone/tablet, over the small set of instructions/commands. Commands are represented by easy to understand A\+S\+C\+I\+I strings with predefined definitions of different parameters. Commands can be sent over the terminal which supports U\+A\+R\+T communication e.\+g. Putty, Hyper\+Terminal, Matlab, etc., or via Bluetooth. Bluetooth communication can be established between the Engduino Bluetooth extension board and a smart device (mobile phone, tablet, etc.) or a personal computer with Bluetooth port. In the case of Bluetooth communication, the Bluetooth extension board for Engduino must be used.
 
-The main sketch implementing this protocol\+: ..\textbackslash{}100.\+Engduino.ino
+The main sketch implementing this protocol is\+: \char`\"{}..\textbackslash{}examples\textbackslash{}100.\+Engduino\textbackslash{}\+Protocol\textbackslash{}\+Protocol.\+ino\char`\"{}
 
-Engduino package\+: Start chr, delimiter, end chr \{ ; \}
+Engduino package\+: \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Start chr}&{\bf Delimiter}&{\bf End chr }\\\cline{1-3}
+\{&;&\}\\\cline{1-3}
+\end{TabularC}
 
-Simplest Engduino package\+: \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E; C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+D; V\+A\+L1, ..., V\+A\+Ln\}
 
-Examples\+: \{1;10;1\} or with defines \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1; C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+L\+E\+D\+S; G\+R\+E\+E\+N\} -\/$>$ Turns on all R\+G\+B L\+E\+Ds with green colour.
+Simplest Engduino package\+:~\newline
+\{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E; C\+O\+M\+M\+A\+N\+D\+\_\+\+I\+D; V\+A\+L1, ..., V\+A\+Ln\}
+
+Examples\+:~\newline
+\{1;10;1\} or with defines \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1; C\+O\+M\+\_\+\+S\+E\+T\+\_\+\+L\+E\+D\+S; G\+R\+E\+E\+N\} -\/$>$ Turns on all R\+G\+B L\+E\+Ds with green colour.
 
 \{1;100\} or with defines \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1; C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+V\+E\+R\+S\+I\+O\+N\} -\/$>$ Returns package as \{1;100;V\+E\+R\+S\+I\+O\+N\}
 
-\{1;111;100\} or with defines \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1; C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E; 100\} -\/$>$ Enables continuous mode on Temperature sensor. Package with measurement of temperature will be sends back on every 100 milliseconds. Sample\+: \{1;111;27546\} represents 27.\+546°\+C. 
+\{1;111;100\} or with defines \{P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1; C\+O\+M\+\_\+\+G\+E\+T\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+E; 100\} -\/$>$ Enables continuous mode on Temperature sensor. Package with measurement of temperature will be sent back on every 100 milliseconds. Sample\+: \{1;111;27546\} represents 27.\+546 degrees Celsius. 
 
 \subsection{Function Documentation}
 \hypertarget{group___engduino_protocol_ga34fa624085b8267e2793094c67e083e2}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!begin@{begin}}
@@ -294,7 +301,7 @@ begin function -\/ must be called before using other functions
 {\em eirc} & Pointer to the \hyperlink{class_engduino_i_r_class}{Engduino\+I\+R\+Class} object\\
 \hline
 \end{DoxyParams}
-This function initialize Engduino protocol functionalities. It needs to be called with all input parameters representing Engduino objects. Objects itself needs to be initialized in user code with required users definitions. \hypertarget{group___engduino_protocol_ga9fe175a6fd0fce69ad087785485f4a61}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!end@{end}}
+This function initializes Engduino protocol functionalities. It must be called with all input parameters representing Engduino objects. Objects themselves must to be initialized in user code with required users definitions. \hypertarget{group___engduino_protocol_ga9fe175a6fd0fce69ad087785485f4a61}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!end@{end}}
 \index{end@{end}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Protocol\+Class\+::end (
 \begin{DoxyParamCaption}
@@ -341,9 +348,18 @@ Get Engduino\textquotesingle{}s sensor measurements.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function will sends button state or enables button interrupt, which will immediately sends back any change in button state. Both edges can be configured as an interrupt source.
+This function will send button state or enables button interrupt, which will immediately sens back any change in button state. Both edges can be configured as an interrupt source.
 
-Input value examples\+: \mbox{[}0 \mbox{]} -\/$>$ Read once \mbox{[}-\/1\mbox{]} -\/$>$ Disable button interrupt \mbox{[}1 \mbox{]} -\/$>$ Sends package on button press \mbox{[}2 \mbox{]} -\/$>$ Sends package on button release \mbox{[}3 \mbox{]} -\/$>$ Sends package on change of both button states \hypertarget{group___engduino_protocol_ga504071d488f9d2a9ace156c4523ea18d}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!get\+Sensor@{get\+Sensor}}
+Input value examples\+: \begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Input val.}&{\bf Action }\\\cline{1-2}
+\mbox{[}0\mbox{]}&Read once \\\cline{1-2}
+\mbox{[}-\/1\mbox{]}&Disable button interrupt \\\cline{1-2}
+\mbox{[}1\mbox{]}&Send package on button press \\\cline{1-2}
+\mbox{[}2\mbox{]}&Send package on button release \\\cline{1-2}
+\mbox{[}3\mbox{]}&Send package on change of both button states\\\cline{1-2}
+\end{TabularC}
+\hypertarget{group___engduino_protocol_ga504071d488f9d2a9ace156c4523ea18d}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!get\+Sensor@{get\+Sensor}}
 \index{get\+Sensor@{get\+Sensor}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{get\+Sensor}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::get\+Sensor (
 \begin{DoxyParamCaption}
@@ -371,9 +387,16 @@ Get Engduino\textquotesingle{}s sensor measurements.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function will sends back measurements from chosen on-\/board sensor or multiple sensors at once. It also supports continuous sampling with specified sampling interval. Active sensor is defined by \char`\"{}sensor\+Type\char`\"{} variable e.\+g.\+: S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P, S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C, S\+E\+N\+S\+O\+R\+\_\+\+A\+L\+L, ...
+This function will send back measurements from chosen on-\/board sensor or multiple sensors at once. It also supports continuous sampling with a specified sampling interval. Active sensor is defined by \char`\"{}sensor\+Type\char`\"{} variable e.\+g.\+: S\+E\+N\+S\+O\+R\+\_\+\+T\+E\+M\+P, S\+E\+N\+S\+O\+R\+\_\+\+A\+C\+C, S\+E\+N\+S\+O\+R\+\_\+\+A\+L\+L, ...
 
-Input value examples\+: \mbox{[}0 \mbox{]} -\/$>$ Read once \mbox{[}-\/1\mbox{]} -\/$>$ Stop continuous sampling if it is active \mbox{[}$>$0\mbox{]} -\/$>$ Start continuous sampling with time interval in \mbox{[}ms\mbox{]} \hypertarget{group___engduino_protocol_gad585cd4ca7ea413a137fe5783825a612}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!get\+Version@{get\+Version}}
+Input value examples\+: \begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Input val.}&{\bf Action }\\\cline{1-2}
+\mbox{[}0\mbox{]}&Read once \\\cline{1-2}
+\mbox{[}-\/1\mbox{]}&Stop continuous sampling if it is active \\\cline{1-2}
+\mbox{[}$>$0\mbox{]}&Start continuous sampling with time interval in \mbox{[}ms\mbox{]}\\\cline{1-2}
+\end{TabularC}
+\hypertarget{group___engduino_protocol_gad585cd4ca7ea413a137fe5783825a612}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!get\+Version@{get\+Version}}
 \index{get\+Version@{get\+Version}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{get\+Version}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::get\+Version (
 \begin{DoxyParamCaption}
@@ -390,9 +413,9 @@ Get Engduino board version and running sketch on it.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
+On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents a particular error.
 \end{DoxyReturn}
-This function will sends back version of the Engduino board and running sketch on it. \hypertarget{group___engduino_protocol_gad39420cdd896dd12c68e36313139d0a5}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!I\+S\+R@{I\+S\+R}}
+This function will send back the version of the Engduino board and running sketch on it. \hypertarget{group___engduino_protocol_gad39420cdd896dd12c68e36313139d0a5}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!I\+S\+R@{I\+S\+R}}
 \index{I\+S\+R@{I\+S\+R}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{I\+S\+R}]{\setlength{\rightskip}{0pt plus 5cm}I\+S\+R (
 \begin{DoxyParamCaption}
@@ -403,7 +426,7 @@ This function will sends back version of the Engduino board and running sketch o
 
 Timer 1 interrupt service routine. 
 
-This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise function will return immediately. \hypertarget{group___engduino_protocol_gaabeaf6ca75e6f6bbdc3cd9b42f4b8015}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!load\+Defaults@{load\+Defaults}}
+This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise the function will return immediately. \hypertarget{group___engduino_protocol_gaabeaf6ca75e6f6bbdc3cd9b42f4b8015}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!load\+Defaults@{load\+Defaults}}
 \index{load\+Defaults@{load\+Defaults}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{load\+Defaults}]{\setlength{\rightskip}{0pt plus 5cm}void Engduino\+Protocol\+Class\+::load\+Defaults (
 \begin{DoxyParamCaption}
@@ -425,7 +448,7 @@ Load default settings. \hypertarget{group___engduino_protocol_ga69274ee75df14c92
 
 The main loop of Engduino protocol operating system. 
 
-This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise function will return immediately. \hypertarget{group___engduino_protocol_ga13412494933a3beaaee8f41fb52b1128}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!parse\+Package@{parse\+Package}}
+This function needs to be called regularly from the main sketch. If there is a waiting task, it will be executed, otherwise the function will return immediately. \hypertarget{group___engduino_protocol_ga13412494933a3beaaee8f41fb52b1128}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!parse\+Package@{parse\+Package}}
 \index{parse\+Package@{parse\+Package}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{parse\+Package}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::parse\+Package (
 \begin{DoxyParamCaption}
@@ -442,7 +465,7 @@ Splits string into array of values.
 \begin{DoxyParams}{Parameters}
 {\em str} & Input string representing Engduino package \\
 \hline
-{\em out\+Nr\+Vals} & Pointer to an output variable which holds the value of splited strings into values type long \\
+{\em out\+Nr\+Vals} & Pointer to an output variable which holds the value of split strings into values type long \\
 \hline
 {\em out\+Vals} & Pointer to an output array with values type long \\
 \hline
@@ -450,7 +473,7 @@ Splits string into array of values.
 \begin{DoxyReturn}{Returns}
 Unconditional R\+E\+S\+\_\+\+O\+K
 \end{DoxyReturn}
-This function will split Engduino package into array of values type long. String will be splitted by delimiter and then converted into long numbers. The number of splitted numbers will be also returned.
+This function will split Engduino package into an array of values type long. String will be split by delimiter and then converted into long numbers. The number of split numbers will be also returned.
 
 Example of Engduino package\+: \{1;10;123\} as an input parameter \char`\"{}str\char`\"{}. \hypertarget{group___engduino_protocol_ga0572419c0b4aaa6f8f0849271787f2b4}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!parse\+Package\+Header@{parse\+Package\+Header}}
 \index{parse\+Package\+Header@{parse\+Package\+Header}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
@@ -483,7 +506,7 @@ Parse package header.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function parse input array of values into the Engduino package structure. The first value in array always represents the package type. Other values in header depend on the package type. The simplest package type is P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1, which includes only a command I\+D. Other package types are more advanced including additional header informations like address, timestamp, acknowledge request, etc. \hypertarget{group___engduino_protocol_gadddb537a6ab657e219d4bbd0d33f79ff}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!send\+Package@{send\+Package}}
+This function parses input array of values into the Engduino package structure. The first value in array always represents the package type. Other values in header depend on the package type. The simplest package type is P\+A\+C\+K\+A\+G\+E\+\_\+\+T\+Y\+P\+E\+\_\+1, which includes only a command I\+D. Other package types are more advanced and include additional header information like address, time stamp, acknowledge request, etc. \hypertarget{group___engduino_protocol_gadddb537a6ab657e219d4bbd0d33f79ff}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!send\+Package@{send\+Package}}
 \index{send\+Package@{send\+Package}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{send\+Package}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::send\+Package (
 \begin{DoxyParamCaption}
@@ -538,7 +561,7 @@ Send package over the active communication channel.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function converts array of input variables into a string and sends package over the active communication channel (Serial or B\+T). Header fields will be added accordingly to the package type. Package Format\+: \{a,b,c,...x,y,z\} \hypertarget{group___engduino_protocol_ga04358743c2b3e13ff61eb072d57e782a}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+Get\+I\+R@{set\+Get\+I\+R}}
+This function converts the array of input variables into a string and sends package over the active communication channel (Serial or B\+T). Header fields will be added accordingly to the package type. Package Format\+: \{a,b,c,...x,y,z\} \hypertarget{group___engduino_protocol_ga04358743c2b3e13ff61eb072d57e782a}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+Get\+I\+R@{set\+Get\+I\+R}}
 \index{set\+Get\+I\+R@{set\+Get\+I\+R}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{set\+Get\+I\+R}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::set\+Get\+I\+R (
 \begin{DoxyParamCaption}
@@ -566,11 +589,15 @@ Set or Get data from I\+R communication.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function will sends data over the I\+R communication or wait on data to be received. Timeout is specified by input parameter. After the timeout expiries received data will be send back over the active communication channel.
+This function will send data over the I\+R communication or wait on data to be received. Timeout is specified by input parameter. After the timeout expiries, received data will be sent back over the active communication channel.
 
-Input value examples\+: S\+E\+T (set\+Get = 0) \mbox{[}69,110,103,100,117,105,110,111\mbox{]} -\/$>$ \char`\"{}\+Engduino\char`\"{} Array \char`\"{}in\+Vals\char`\"{} represents letters (A\+S\+C\+I\+I values; \href{http://www.asciitable.com/}{\tt http\+://www.\+asciitable.\+com/}) separated by delimiter.
+Input value examples\+: S\+E\+T (set\+Get = 0) ~\newline
+ \mbox{[}69,110,103,100,117,105,110,111\mbox{]} -\/$>$ \char`\"{}\+Engduino\char`\"{} ~\newline
+ Array \char`\"{}in\+Vals\char`\"{} represents letters (A\+S\+C\+I\+I values; \href{http://www.asciitable.com/}{\tt http\+://www.\+asciitable.\+com/}) separated by delimiter.
 
-Input value examples\+: G\+E\+T (set\+Get = 1) \mbox{[}1000\mbox{]} -\/$>$ Timeout is set on 1000us (1ms); Max timeout is 65535us \hypertarget{group___engduino_protocol_gac1faeb0dc90fcacd10ee643c3a45f82f}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+Get\+Status@{set\+Get\+Status}}
+~\newline
+ Input value examples\+: G\+E\+T (set\+Get = 1) ~\newline
+ \mbox{[}1000\mbox{]} -\/$>$ Timeout is set on 1000us (1ms); Max timeout is 65535us \hypertarget{group___engduino_protocol_gac1faeb0dc90fcacd10ee643c3a45f82f}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+Get\+Status@{set\+Get\+Status}}
 \index{set\+Get\+Status@{set\+Get\+Status}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{set\+Get\+Status}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::set\+Get\+Status (
 \begin{DoxyParamCaption}
@@ -598,11 +625,13 @@ Set or Get status of the Engduino board.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function will sets or gets Engduino configuration. Parameters needs to be specified in K\+E\+Y-\/\+V\+A\+L\+U\+E pairs. Multiple pairs can be included in the same package.
+This function will set or get Engduino configuration. Parameters needs to be specified in K\+E\+Y-\/\+V\+A\+L\+U\+E pairs. Multiple pairs can be included in the same package.
 
-Input value examples\+: S\+E\+T (set\+Get = 0) \mbox{[}0,12, 1,23, 6,0, ...\mbox{]} -\/$>$ Set status variable 0 to a value 12, Set status variable 1 to a value 23, Set status variable 6 to a value 0.
+Input value examples\+: S\+E\+T (set\+Get = 0) ~\newline
+ \mbox{[}0,12, 1,23, 6,0, ...\mbox{]} -\/$>$ Set status variable 0 to a value 12, Set status variable 1 to a value 23, Set status variable 6 to a value 0.
 
-Input value examples\+: G\+E\+T (set\+Get = 1) \mbox{[}0, 1, 6\mbox{]} -\/$>$ Will return K\+E\+Y-\/\+V\+A\+L\+U\+E pairs for status variables 0, 1 and 6. E.\+g.\+: \mbox{[}0,12, 1,23, 6,0\mbox{]} \hypertarget{group___engduino_protocol_ga4f6f6185d9345303466934fb97f5e5f3}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+L\+E\+D@{set\+L\+E\+D}}
+Input value examples\+: G\+E\+T (set\+Get = 1) ~\newline
+ \mbox{[}0, 1, 6\mbox{]} -\/$>$ Will return K\+E\+Y-\/\+V\+A\+L\+U\+E pairs for status variables 0, 1 and 6. E.\+g.\+: \mbox{[}0,12, 1,23, 6,0\mbox{]} \hypertarget{group___engduino_protocol_ga4f6f6185d9345303466934fb97f5e5f3}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+L\+E\+D@{set\+L\+E\+D}}
 \index{set\+L\+E\+D@{set\+L\+E\+D}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{set\+L\+E\+D}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::set\+L\+E\+D (
 \begin{DoxyParamCaption}
@@ -629,7 +658,13 @@ On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error
 \end{DoxyReturn}
 This function parses input value and turn on of off small green L\+E\+D.
 
-Input value examples\+: \mbox{[}0 \mbox{]} -\/$>$ Turn off L\+E\+D \mbox{[}$>$= 1\mbox{]} -\/$>$ Turn on L\+E\+D \hypertarget{group___engduino_protocol_ga429539daf1580716935d0f4c9fee60a7}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
+Input value examples\+: \begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Input val.}&{\bf Action }\\\cline{1-2}
+\mbox{[}0\mbox{]}&Turn off L\+E\+D \\\cline{1-2}
+\mbox{[}$>$= 1\mbox{]}&Turn on L\+E\+D\\\cline{1-2}
+\end{TabularC}
+\hypertarget{group___engduino_protocol_ga429539daf1580716935d0f4c9fee60a7}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!set\+L\+E\+Ds@{set\+L\+E\+Ds}}
 \index{set\+L\+E\+Ds@{set\+L\+E\+Ds}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{set\+L\+E\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}int Engduino\+Protocol\+Class\+::set\+L\+E\+Ds (
 \begin{DoxyParamCaption}
@@ -654,9 +689,20 @@ Set colours and brightness of R\+G\+B L\+E\+Ds.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function parses input values into the R\+G\+B colours and brightness. Function supports many different options how to manipulate with L\+E\+Ds. From turning on a single L\+E\+D to a full R\+G\+B specter on each L\+E\+D.
+This function parses input values into the R\+G\+B colours and brightness. The function supports many different options on how to manipulate with L\+E\+Ds. From turning on a single L\+E\+D to a full R\+G\+B specter on each L\+E\+D.
 
-Input value examples\+: Nr\+Of\+Parameters Value Action 1 -\/ \mbox{[}colour\mbox{]} \mbox{[}0-\/7\mbox{]} Set colour of all L\+E\+Ds. 2 -\/ \mbox{[}led\+I\+D, colour\mbox{]} \mbox{[}0-\/15, 0-\/7\mbox{]} Set colour of one L\+E\+D. 3 -\/ \mbox{[}c\+R, c\+G, c\+B\mbox{]} \mbox{[}0-\/15, 0-\/15, 0-\/15\mbox{]} Set R\+G\+B colour of all L\+E\+Ds. 4 -\/ \mbox{[}led\+I\+D, c\+R, c\+G, c\+B\mbox{]} \mbox{[}0-\/7, 0-\/15, 0-\/15, 0-\/15\mbox{]} Set R\+G\+B colour of one L\+E\+D. 16 -\/ \mbox{[}c0, c1, ... , c15\mbox{]} \mbox{[}0-\/15, 0-\/15, ..., 0-\/15\mbox{]} Set colours specific colours of all L\+E\+Ds. 32 -\/ \mbox{[}c0, ..., c15, b0, ..., b15\mbox{]} \mbox{[}0-\/7, ..., 0-\/7, 0-\/15, ..., 0-\/15\mbox{]} Set specific colours and brightness of all L\+E\+Ds. 48 -\/ \mbox{[}r0, g0, b0, ... , r15, g15, b15\mbox{]} \mbox{[}0-\/15, ..., 0-\/15\mbox{]} Set specific R\+G\+B colours of all L\+E\+Ds. \hypertarget{group___engduino_protocol_gad15fd39a7f4787cf6c8bbfc101df4387}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}}
+Input value examples\+: \begin{TabularC}{3}
+\hline
+\rowcolor{lightgray}{\bf Nr\+Of\+Parameters}&{\bf Value}&{\bf Action }\\\cline{1-3}
+1 -\/ \mbox{[}colour\mbox{]}&\mbox{[}0-\/7\mbox{]}&Set colour of all L\+E\+Ds \\\cline{1-3}
+2 -\/ \mbox{[}led\+I\+D, colour\mbox{]}&\mbox{[}0-\/15, 0-\/7\mbox{]}&Set colour of one L\+E\+D \\\cline{1-3}
+3 -\/ \mbox{[}c\+R, c\+G, c\+B\mbox{]}&\mbox{[}0-\/15, 0-\/15, 0-\/15\mbox{]}&Set R\+G\+B colour of all L\+E\+Ds \\\cline{1-3}
+4 -\/ \mbox{[}led\+I\+D, c\+R, c\+G, c\+B\mbox{]}&\mbox{[}0-\/7, 0-\/15, 0-\/15, 0-\/15\mbox{]}&Set R\+G\+B colour of one L\+E\+D \\\cline{1-3}
+16 -\/ \mbox{[}c0, c1, ... , c15\mbox{]}&\mbox{[}0-\/15, 0-\/15, ..., 0-\/15\mbox{]}&Set colours specific colours of all L\+E\+Ds \\\cline{1-3}
+32 -\/ \mbox{[}c0, ..., c15, b0, ..., b15\mbox{]}&\mbox{[}0-\/7, ..., 0-\/7, 0-\/15, ..., 0-\/15\mbox{]}&Set specific colours and brightness of all L\+E\+Ds \\\cline{1-3}
+48 -\/ \mbox{[}r0, g0, b0, ... , r15, g15, b15\mbox{]}&\mbox{[}0-\/15, ..., 0-\/15\mbox{]}&Set specific R\+G\+B colours of all L\+E\+Ds \\\cline{1-3}
+\end{TabularC}
+\hypertarget{group___engduino_protocol_gad15fd39a7f4787cf6c8bbfc101df4387}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}}
 \index{````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{$\sim$\+Engduino\+Protocol\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Protocol\+Class\+::$\sim$\+Engduino\+Protocol\+Class (
 \begin{DoxyParamCaption}
