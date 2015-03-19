@@ -31,12 +31,18 @@ int \hyperlink{group___engduino_protocol_gac1faeb0dc90fcacd10ee643c3a45f82f}{set
 \begin{DoxyCompactList}\small\item\em Set or Get status of the Engduino board. \end{DoxyCompactList}\item 
 int \hyperlink{group___engduino_protocol_ga04358743c2b3e13ff61eb072d57e782a}{set\+Get\+I\+R} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t set\+Get)
 \begin{DoxyCompactList}\small\item\em Set or Get data from I\+R communication. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga03a85a36fca38e5841424db6efd8cd17}{set\+Pins\+Type} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte in\+Nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t dig\+Analog)
+\begin{DoxyCompactList}\small\item\em Set digital or analog pin type. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_gad39688bc052b473389917ef7daa6f0f2}{set\+Pins\+Value} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte in\+Nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t dig\+Analog)
+\begin{DoxyCompactList}\small\item\em Set digital or analog pin value. \end{DoxyCompactList}\item 
 int \hyperlink{group___engduino_protocol_gad585cd4ca7ea413a137fe5783825a612}{get\+Version} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package)
 \begin{DoxyCompactList}\small\item\em Get Engduino board version and running sketch on it. \end{DoxyCompactList}\item 
 int \hyperlink{group___engduino_protocol_ga504071d488f9d2a9ace156c4523ea18d}{get\+Sensor} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, int sensor\+Type, byte nr\+Vals, long $\ast$in\+Vals)
 \begin{DoxyCompactList}\small\item\em Get Engduino\textquotesingle{}s sensor measurements. \end{DoxyCompactList}\item 
 int \hyperlink{group___engduino_protocol_gad53e6d5d3c390c3eca7f0456aa7a5d05}{get\+Button} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte nr\+Vals, long $\ast$in\+Vals)
-\begin{DoxyCompactList}\small\item\em Get Engduino\textquotesingle{}s sensor measurements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get Engduino\textquotesingle{}s button state. \end{DoxyCompactList}\item 
+int \hyperlink{group___engduino_protocol_ga6945fb3a4a3bb9b86e602168e21628b7}{get\+Pins\+Value} (struct \hyperlink{struct_engduino_package}{Engduino\+Package} $\ast$eng\+Package, byte in\+Nr\+Vals, long $\ast$in\+Vals, uint8\+\_\+t dig\+Analog)
+\begin{DoxyCompactList}\small\item\em Get digital or analog pin value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
