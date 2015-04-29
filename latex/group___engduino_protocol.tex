@@ -201,6 +201,11 @@ class \hyperlink{class_engduino_protocol_class}{Engduino\+Protocol\+Class}
 {\bfseries P\+I\+N\+\_\+\+T\+R\+A\+N\+\_\+\+B\+O\+T\+H} = 3
  \}\label{group___engduino_protocol_ga61dadd085c1777f559549e05962b2c9e}
 
+\item 
+\hypertarget{group___engduino_protocol_ga726ca809ffd3d67ab4b8476646f26635}{}enum \{ {\bfseries P\+I\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+I\+G\+I\+T\+A\+L}, 
+{\bfseries P\+I\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+N\+A\+L\+O\+G}
+ \}\label{group___engduino_protocol_ga726ca809ffd3d67ab4b8476646f26635}
+
 \end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -848,7 +853,7 @@ Set digital or analog pin value.
 \begin{DoxyReturn}{Returns}
 On success R\+E\+S\+\_\+\+O\+K, otherwise error code represents particular error.
 \end{DoxyReturn}
-This function will set pins value. Parameters needs to be specified in K\+E\+Y-\/\+V\+A\+L\+U\+E pairs. Multiple pairs can be included in the same package. Be carful that pin is already initialized as output!
+This function will set pins value. Parameters needs to be specified in K\+E\+Y-\/\+V\+A\+L\+U\+E-\/\+V\+A\+L\+U\+E block. The K\+E\+Y is a pin number. The first V\+A\+L\+U\+E donates to a pin value and the second V\+A\+L\+U\+E donates to a pulse width in milliseconds. Multiple blocks can be included in the same package. In the case of passing only one block, only K\+E\+Y-\/\+V\+A\+L\+U\+E block is allowed, representing pin number and pin value without pulse width. Be carful that a pin is already initialized as an output!
 
 Pin value\+: \begin{TabularC}{2}
 \hline
@@ -859,11 +864,22 @@ Pin value\+: \begin{TabularC}{2}
 \end{TabularC}
 
 
+Pulse width\+: \begin{TabularC}{2}
+\hline
+\rowcolor{lightgray}{\bf Value}&{\bf Type }\\\cline{1-2}
+\mbox{[}$<$ 1\mbox{]}&No pulse \\\cline{1-2}
+\mbox{[}$>$ 1\mbox{]}&Pulse duration in milliseconds\\\cline{1-2}
+\end{TabularC}
+
+
+Input value examples\+: (Special case -\/ dig\+Analog = 0) ~\newline
+ \mbox{[}4,1\mbox{]} -\/$>$ Set D4 on H\+I\+G\+H state.
+
 Input value examples\+: (dig\+Analog = 0) ~\newline
- \mbox{[}1,0, 4,0, 12,1, ...\mbox{]} -\/$>$ Reset D1 and D4 and set D12 on H\+I\+G\+H state.
+ \mbox{[}4,0,0, 6,1,2500, 8,0,560, ...\mbox{]} -\/$>$ Set D4 on H\+I\+G\+H state, set D6 on H\+I\+G\+H state for 2500 milliseconds and set D8 on L\+O\+W state for 560 milliseconds. After the pulse duration expire the state of the pin will be inverted.
 
 Input value examples\+: (dig\+Analog = 1) ~\newline
- \mbox{[}5,96, 13,239, ...\mbox{]} -\/$>$ Set D5\# and D13\# as a P\+W\+M outputs. Value represents the duty cycle\+: between 0 (always off) and 255 (always on). \hypertarget{group___engduino_protocol_gad15fd39a7f4787cf6c8bbfc101df4387}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}}
+ \mbox{[}5,96,0 13,239,1000 ...\mbox{]} -\/$>$ Set D5\# and D13\# as P\+W\+M outputs. The second value in a block represents the duty cycle\+: between 0 (always off) and 255 (always on). The third value represents active duration. After duration expire the P\+W\+M output will be set to zero. \hypertarget{group___engduino_protocol_gad15fd39a7f4787cf6c8bbfc101df4387}{}\index{Driver for Engduino Protocol@{Driver for Engduino Protocol}!````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}}
 \index{````~Engduino\+Protocol\+Class@{$\sim$\+Engduino\+Protocol\+Class}!Driver for Engduino Protocol@{Driver for Engduino Protocol}}
 \subsubsection[{$\sim$\+Engduino\+Protocol\+Class}]{\setlength{\rightskip}{0pt plus 5cm}Engduino\+Protocol\+Class\+::$\sim$\+Engduino\+Protocol\+Class (
 \begin{DoxyParamCaption}

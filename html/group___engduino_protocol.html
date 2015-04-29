@@ -290,6 +290,10 @@ Enumerations</h2></td></tr>
 <b>PIN_TRAN_BOTH</b> = 3
  }</td></tr>
 <tr class="separator:ga61dadd085c1777f559549e05962b2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga726ca809ffd3d67ab4b8476646f26635"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>PIN_TYPE_DIGITAL</b>, 
+<b>PIN_TYPE_ANALOG</b>
+ }</td></tr>
+<tr class="separator:ga726ca809ffd3d67ab4b8476646f26635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -1309,7 +1313,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>On success RES_OK, otherwise error code represents particular error.</dd></dl>
-<p>This function will set pins value. Parameters needs to be specified in KEY-VALUE pairs. Multiple pairs can be included in the same package. Be carful that pin is already initialized as output!</p>
+<p>This function will set pins value. Parameters needs to be specified in KEY-VALUE-VALUE block. The KEY is a pin number. The first VALUE donates to a pin value and the second VALUE donates to a pulse width in milliseconds. Multiple blocks can be included in the same package. In the case of passing only one block, only KEY-VALUE block is allowed, representing pin number and pin value without pulse width. Be carful that a pin is already initialized as an output!</p>
 <p>Pin value: </p><table class="doxtable">
 <tr>
 <th>Value</th><th>Type </th></tr>
@@ -1320,10 +1324,20 @@ Variables</h2></td></tr>
 <tr>
 <td>[0-255]</td><td>PWM duty cycle</td></tr>
 </table>
+<p>Pulse width: </p><table class="doxtable">
+<tr>
+<th>Value</th><th>Type </th></tr>
+<tr>
+<td>[&lt; 1]</td><td>No pulse </td></tr>
+<tr>
+<td>[&gt; 1]</td><td>Pulse duration in milliseconds</td></tr>
+</table>
+<p>Input value examples: (Special case - digAnalog = 0) <br />
+ [4,1] -&gt; Set D4 on HIGH state.</p>
 <p>Input value examples: (digAnalog = 0) <br />
- [1,0, 4,0, 12,1, ...] -&gt; Reset D1 and D4 and set D12 on HIGH state.</p>
+ [4,0,0, 6,1,2500, 8,0,560, ...] -&gt; Set D4 on HIGH state, set D6 on HIGH state for 2500 milliseconds and set D8 on LOW state for 560 milliseconds. After the pulse duration expire the state of the pin will be inverted.</p>
 <p>Input value examples: (digAnalog = 1) <br />
- [5,96, 13,239, ...] -&gt; Set D5# and D13# as a PWM outputs. Value represents the duty cycle: between 0 (always off) and 255 (always on). </p>
+ [5,96,0 13,239,1000 ...] -&gt; Set D5# and D13# as PWM outputs. The second value in a block represents the duty cycle: between 0 (always off) and 255 (always on). The third value represents active duration. After duration expire the PWM output will be set to zero. </p>
 
 </div>
 </div>
@@ -1348,7 +1362,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 19 2015 16:47:27 for Engduino by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 29 2015 17:37:08 for Engduino by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
